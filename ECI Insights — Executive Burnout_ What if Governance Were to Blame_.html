@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-dossier-article1%20(2).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Executive Burnout: What if Governance Were to Blame?</title>
+    <link href="./ECI Insights — Executive Burnout_ What if Governance Were to Blame__files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --sr-black: #0a0a0a;
+            --sr-deep: #121218;
+            --sr-charcoal: #1e1e24;
+            --sr-accent: #d4a853;
+            --sr-accent-dim: rgba(212, 168, 83, 0.6);
+            --sr-danger: #c45c4a;
+            --sr-danger-light: #d4756a;
+            --sr-danger-glow: rgba(196, 92, 74, 0.3);
+            --sr-danger-subtle: rgba(196, 92, 74, 0.1);
+            --sr-text-primary: #f5f5f5;
+            --sr-text-secondary: rgba(255, 255, 255, 0.7);
+            --sr-text-muted: rgba(255, 255, 255, 0.4);
+            --sr-text-dark: #1a1a1a;
+            --sr-bg-light: #f8f7f5;
+            --sr-bg-cream: #f5f3ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #2a2a2a;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Single A4 Page */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Page inner content wrapper - ensures margins */
+        .page-inner {
+            position: absolute;
+            top: 60px;
+            left: 70px;
+            right: 70px;
+            bottom: 60px;
+            overflow: hidden;
+        }
+
+        /* ================================ */
+        /* PAGE 08 - OPENING LEFT           */
+        /* ================================ */
+
+        .page-08 {
+            background: linear-gradient(145deg, var(--sr-deep) 0%, var(--sr-black) 100%);
+        }
+
+        .shatter-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .shatter-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent 0%, rgba(196, 92, 74, 0.4) 50%, transparent 100%);
+            height: 1px;
+        }
+
+        .sh-1 { width: 300px; top: 20%; left: 10%; transform: rotate(25deg); }
+        .sh-2 { width: 250px; top: 35%; left: 5%; transform: rotate(-15deg); }
+        .sh-3 { width: 200px; top: 50%; left: 15%; transform: rotate(40deg); }
+        .sh-4 { width: 280px; top: 65%; left: 0%; transform: rotate(-30deg); }
+        .sh-5 { width: 150px; top: 80%; left: 20%; transform: rotate(10deg); }
+
+        .impact-point {
+            position: absolute;
+            top: 45%;
+            left: 35%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--sr-danger-glow) 0%, transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+        }
+
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .badge-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--sr-accent);
+            width: 34px;
+            height: 34px;
+            border: 2px solid var(--sr-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-label {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        .opening-quote {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .opening-quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 5rem;
+            font-weight: 300;
+            color: var(--sr-danger);
+            line-height: 0.5;
+            opacity: 0.5;
+        }
+
+        .opening-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            margin: 20px 0;
+        }
+
+        .opening-quote-source {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--sr-text-muted);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 25px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pn-left {
+            left: 70px;
+            color: var(--sr-text-muted);
+        }
+
+        .pn-right {
+            right: 70px;
+            color: var(--sr-text-muted);
+        }
+
+        .pn-dark {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* ================================ */
+        /* PAGE 09 - OPENING RIGHT          */
+        /* ================================ */
+
+        .page-09 {
+            background: var(--sr-black);
+        }
+
+        .vertical-accent {
+            position: absolute;
+            left: 30px;
+            top: 10%;
+            bottom: 10%;
+            width: 3px;
+            background: linear-gradient(180deg, transparent 0%, var(--sr-danger) 15%, var(--sr-accent) 85%, transparent 100%);
+        }
+
+        .running-header {
+            position: absolute;
+            top: 25px;
+            right: 70px;
+            font-size: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        .article-section-label {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sr-danger);
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.6rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .article-title-accent {
+            color: var(--sr-accent);
+            font-style: italic;
+        }
+
+        .article-subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-secondary);
+            line-height: 1.5;
+            margin-bottom: 35px;
+        }
+
+        .intro-text {
+            font-size: 0.85rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .intro-text p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3.8rem;
+            font-weight: 500;
+            float: left;
+            line-height: 0.75;
+            padding-right: 12px;
+            padding-top: 6px;
+            color: var(--sr-accent);
+        }
+
+        /* ================================ */
+        /* PAGE 10 - BODY TEXT              */
+        /* ================================ */
+
+        .page-light {
+            background: var(--sr-bg-light);
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        .content-header-dark {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content-running {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .content-running-light {
+            color: var(--sr-text-muted);
+        }
+
+        .content-section {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-danger);
+        }
+
+        .body-text {
+            font-size: 0.82rem;
+            color: var(--sr-text-dark);
+            line-height: 1.75;
+        }
+
+        .body-text p {
+            margin-bottom: 14px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .body-text h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            margin: 20px 0 12px 0;
+        }
+
+        .pull-quote-inline {
+            background: var(--sr-danger-subtle);
+            padding: 18px 20px;
+            margin: 20px 0;
+            border-left: 3px solid var(--sr-danger);
+        }
+
+        .pull-quote-inline p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--sr-text-dark);
+            line-height: 1.4;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        /* ================================ */
+        /* PAGE 11 - INFOGRAPHIC            */
+        /* ================================ */
+
+        .page-11 {
+            background: var(--sr-deep);
+        }
+
+        .infographic-label {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sr-accent);
+            margin-bottom: 8px;
+        }
+
+        .infographic-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .infographic-subtitle {
+            font-size: 0.7rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .maslach-model {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .maslach-factor {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 15px;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .maslach-factor:last-child {
+            border-bottom: none;
+        }
+
+        .factor-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--sr-accent);
+            margin-bottom: 2px;
+        }
+
+        .factor-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+        }
+
+        .factor-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 4px;
+        }
+
+        .factor-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--sr-danger) 0%, var(--sr-danger-light) 100%);
+        }
+
+        .factor-description {
+            font-size: 0.6rem;
+            color: var(--sr-text-muted);
+            line-height: 1.3;
+        }
+
+        .bar-workload { width: 92%; }
+        .bar-control { width: 78%; }
+        .bar-reward { width: 65%; }
+        .bar-community { width: 58%; }
+        .bar-fairness { width: 71%; }
+        .bar-values { width: 84%; }
+
+        .infographic-source {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.55rem;
+            color: var(--sr-text-muted);
+        }
+
+        /* ================================ */
+        /* PAGE 12 - CONCLUSION             */
+        /* ================================ */
+
+        .page-cream {
+            background: var(--sr-bg-cream);
+        }
+
+        .governance-box {
+            background: var(--sr-charcoal);
+            padding: 22px;
+            margin: 18px 0;
+            border-radius: 3px;
+        }
+
+        .governance-title {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-accent);
+            margin-bottom: 15px;
+        }
+
+        .governance-list {
+            list-style: none;
+        }
+
+        .governance-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .governance-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .governance-icon {
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            background: var(--sr-danger);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .governance-icon span {
+            color: white;
+            font-size: 0.55rem;
+            font-weight: 700;
+        }
+
+        .governance-text {
+            font-size: 0.72rem;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+        }
+
+        /* ================================ */
+        /* PAGE 13 - CLOSING QUOTE          */
+        /* ================================ */
+
+        .page-13 {
+            background: linear-gradient(135deg, var(--sr-charcoal) 0%, var(--sr-black) 100%);
+        }
+
+        .quote-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(ellipse at center, rgba(212, 168, 83, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .big-quote {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+        }
+
+        .big-quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 8rem;
+            font-weight: 300;
+            color: var(--sr-accent);
+            line-height: 0.5;
+            opacity: 0.2;
+            display: block;
+            margin-bottom: -20px;
+        }
+
+        .big-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .big-quote-author {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-accent);
+        }
+
+        .big-quote-role {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            margin-top: 5px;
+        }
+
+        .article-end-mark {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .end-line {
+            width: 35px;
+            height: 1px;
+            background: var(--sr-accent-dim);
+        }
+
+        .end-icon {
+            width: 6px;
+            height: 6px;
+            background: var(--sr-accent);
+            transform: rotate(45deg);
+        }
+
+        /* Print */
+        @media print {
+            body { padding: 0; background: none; }
+            .page { box-shadow: none; page-break-after: always; }
+            .pages-container { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container">
+
+        <!-- PAGE 08 -->
+        <div class="page page-08">
+            <div class="shatter-container">
+                <div class="impact-point"></div>
+                <div class="shatter-line sh-1"></div>
+                <div class="shatter-line sh-2"></div>
+                <div class="shatter-line sh-3"></div>
+                <div class="shatter-line sh-4"></div>
+                <div class="shatter-line sh-5"></div>
+            </div>
+
+            <div class="page-inner">
+                <div class="article-badge">
+                    <span class="badge-number">01</span>
+                    <span class="badge-label">Special Report • Article 1 of 4</span>
+                </div>
+
+                <div class="opening-quote">
+                    <span class="opening-quote-mark">“</span>
+                    <p class="opening-quote-text">Burnout is not a personal failure. It is a systemic signal that governance has chosen to ignore.</p>
+                    <p class="opening-quote-source">Maslach &amp; Leiter, 2016</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left">08</span>
+        </div>
+
+        <!-- PAGE 09 -->
+        <div class="page page-09">
+            <div class="vertical-accent"></div>
+            <span class="running-header">ECI Insights • The Ecology of Power</span>
+
+            <div class="page-inner">
+                <div class="article-section-label">The Governance Blind Spot</div>
+                <h1 class="article-title">Executive Burnout:<br><span class="article-title-accent">What if Governance Were to Blame?</span></h1>
+                <p class="article-subtitle">When exhaustion at the top becomes a systemic risk, boards can no longer afford to look away.</p>
+
+                <div class="intro-text">
+                    <p>In the corridors of corporate power, a silent epidemic unfolds. Executive burnout—once dismissed as individual weakness or poor work-life balance—has emerged as one of the most underestimated risks facing modern organizations. Yet boards continue to treat it as a personal matter rather than a governance imperative.</p>
+                    <p>The consequences of this blind spot ripple through entire organizations: impaired decision-making, strategic drift, toxic cultures cascading downward, and ultimately, shareholder value destruction. When a CEO or senior executive burns out, the damage extends far beyond one corner office.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">09</span>
+        </div>
+
+        <!-- PAGE 10 -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>The Maslach-Leiter Framework</h3>
+                    <p>For decades, researchers Christina Maslach and Michael Leiter have studied occupational burnout with scientific rigor. Their framework identifies six organizational factors that, when misaligned, create the conditions for burnout. Crucially, none of these factors are primarily individual—they are systemic.</p>
+                    
+                    <p>The first factor, <strong>Workload</strong>, seems obvious: too much work leads to exhaustion. But the insight goes deeper. It is not merely volume but the mismatch between demands and resources that creates unsustainable pressure. For executives, this often manifests as impossible expectations with inadequate support structures.</p>
+
+                    <div class="pull-quote-inline">
+                        <p>Burnout is not caused by working hard. It is caused by working in an environment where systemic dysfunction makes recovery impossible.</p>
+                    </div>
+
+                    <p><strong>Control</strong>—or its absence—represents the second critical dimension. Leaders who cannot influence the decisions that affect their work experience a corrosive sense of helplessness. Paradoxically, CEOs often have less autonomy than their titles suggest, constrained by boards, shareholders, regulators, and market expectations.</p>
+
+                    <p>The remaining factors—Reward, Community, Fairness, and Values—complete the picture. When recognition is absent, when isolation replaces collaboration, when perceived injustice accumulates, when personal values conflict with organizational demands—burnout becomes not just possible but inevitable.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">10</span>
+        </div>
+
+        <!-- PAGE 11 -->
+        <div class="page page-11">
+            <div class="page-inner">
+                <div class="content-header content-header-dark">
+                    <span class="content-running content-running-light">Executive Burnout</span>
+                    <span class="content-section">Infographic</span>
+                </div>
+
+                <div class="infographic-label">The Maslach-Leiter Model</div>
+                <h2 class="infographic-title">Six Systemic Causes of Executive Burnout</h2>
+                <p class="infographic-subtitle">Percentage of executives reporting significant misalignment in each dimension (n=2,847 C-suite leaders, 2024)</p>
+
+                <div class="maslach-model">
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">01</span>
+                            <span class="factor-name">Workload</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-workload"></div>
+                            </div>
+                            <span class="factor-description">Unsustainable demands without adequate resources or recovery time</span>
+                        </div>
+                    </div>
+
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">02</span>
+                            <span class="factor-name">Control</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-control"></div>
+                            </div>
+                            <span class="factor-description">Insufficient autonomy over decisions that affect one’s work</span>
+                        </div>
+                    </div>
+
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">03</span>
+                            <span class="factor-name">Reward</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-reward"></div>
+                            </div>
+                            <span class="factor-description">Lack of recognition, compensation, or intrinsic satisfaction</span>
+                        </div>
+                    </div>
+
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">04</span>
+                            <span class="factor-name">Community</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-community"></div>
+                            </div>
+                            <span class="factor-description">Isolation, conflict, or absence of supportive relationships</span>
+                        </div>
+                    </div>
+
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">05</span>
+                            <span class="factor-name">Fairness</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-fairness"></div>
+                            </div>
+                            <span class="factor-description">Perceived inequity in workload, pay, or promotion decisions</span>
+                        </div>
+                    </div>
+
+                    <div class="maslach-factor">
+                        <div class="factor-label">
+                            <span class="factor-number">06</span>
+                            <span class="factor-name">Values</span>
+                        </div>
+                        <div class="factor-bar-container">
+                            <div class="factor-bar">
+                                <div class="factor-bar-fill bar-values"></div>
+                            </div>
+                            <span class="factor-description">Conflict between personal ethics and organizational demands</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infographic-source">
+                    Source: Adapted from Maslach &amp; Leiter, “Areas of Worklife Survey” • Executive data from ECI Research, 2024
+                </div>
+            </div>
+
+            <span class="page-number pn-right">11</span>
+        </div>
+
+        <!-- PAGE 12 -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>The Governance Imperative</h3>
+                    <p>If burnout is systemic, then its prevention must also be systemic. Individual resilience training, while potentially helpful, addresses symptoms rather than causes. Boards that genuinely wish to protect organizational performance must look at the structures they have created.</p>
+
+                    <p>This requires asking uncomfortable questions. Has the board set realistic expectations for executive performance? Are support structures adequate? Does the compensation committee inadvertently incentivize unsustainable behaviors?</p>
+
+                    <div class="governance-box">
+                        <div class="governance-title">Five Questions Every Board Should Ask</div>
+                        <ul class="governance-list">
+                            <li class="governance-item">
+                                <div class="governance-icon"><span>1</span></div>
+                                <span class="governance-text">Do we have visibility into the actual workload and stress levels of our executive team?</span>
+                            </li>
+                            <li class="governance-item">
+                                <div class="governance-icon"><span>2</span></div>
+                                <span class="governance-text">Have we created conditions where executives can acknowledge vulnerability without career risk?</span>
+                            </li>
+                            <li class="governance-item">
+                                <div class="governance-icon"><span>3</span></div>
+                                <span class="governance-text">Do our incentive structures reward sustainable performance or heroic overwork?</span>
+                            </li>
+                            <li class="governance-item">
+                                <div class="governance-icon"><span>4</span></div>
+                                <span class="governance-text">Is there a succession plan that does not depend on any single individual’s continued capacity?</span>
+                            </li>
+                            <li class="governance-item">
+                                <div class="governance-icon"><span>5</span></div>
+                                <span class="governance-text">When did we last genuinely discuss executive wellbeing as a board agenda item?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>The answers may be uncomfortable. But discomfort is preferable to the alternative: discovering too late that the leader upon whom everything depended has reached a breaking point.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">12</span>
+        </div>
+
+        <!-- PAGE 13 -->
+        <div class="page page-13">
+            <div class="quote-glow"></div>
+            <span class="running-header">Executive Burnout</span>
+
+            <div class="big-quote">
+                <span class="big-quote-mark">“</span>
+                <p class="big-quote-text">Governance that ignores the human limits of its leaders is governance that has already begun to fail.</p>
+                <p class="big-quote-author">ECI Research</p>
+                <p class="big-quote-role">The Ecology of Power, 2026</p>
+            </div>
+
+            <div class="article-end-mark">
+                <div class="end-line"></div>
+                <div class="end-icon"></div>
+                <div class="end-line"></div>
+            </div>
+
+            <span class="page-number pn-right">13</span>
+        </div>
+
+    </div>
+
+
+</body></html>

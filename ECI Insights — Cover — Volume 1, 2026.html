@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-cover-v2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Cover — Volume 1, 2026</title>
+    <link href="./ECI Insights — Cover — Volume 1, 2026_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            /* ECI Group Brand Colors - extracted from website */
+            --eci-dark: #1a1a1a;
+            --eci-charcoal: #2d2d2d;
+            --eci-gray: #4a4a4a;
+            --eci-light-gray: #e5e5e5;
+            --eci-white: #ffffff;
+            --eci-accent: #c8a45c; /* Gold accent from ECI branding */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 210mm 297mm;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .cover {
+            width: 210mm;
+            height: 297mm;
+            background: var(--eci-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header Band */
+        .header-band {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: var(--eci-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-white);
+            letter-spacing: 2px;
+        }
+
+        .logo-text span {
+            color: var(--eci-accent);
+            font-style: italic;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .volume-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 5px;
+        }
+
+        .volume-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--eci-white);
+            line-height: 1;
+        }
+
+        /* Main Visual Area */
+        .visual-area {
+            position: absolute;
+            top: 140px;
+            left: 0;
+            right: 0;
+            height: 420px;
+            background: linear-gradient(135deg, #f8f6f3 0%, #ebe7e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Abstract Illustration - Eye/Vision concept */
+        .illustration {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+
+        .eye-outer {
+            position: absolute;
+            width: 300px;
+            height: 180px;
+            border: 3px solid var(--eci-charcoal);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            top: 70px;
+            left: 10px;
+            transform: rotate(-5deg);
+        }
+
+        .eye-iris {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border: 3px solid var(--eci-charcoal);
+            border-radius: 50%;
+            top: 90px;
+            left: 90px;
+            background: radial-gradient(circle at 40% 40%, 
+                transparent 0%, 
+                transparent 30%,
+                rgba(200, 164, 92, 0.1) 30%,
+                rgba(200, 164, 92, 0.2) 100%);
+        }
+
+        .eye-pupil {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: var(--eci-charcoal);
+            border-radius: 50%;
+            top: 135px;
+            left: 135px;
+        }
+
+        .eye-reflection {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: var(--eci-white);
+            border-radius: 50%;
+            top: 140px;
+            left: 145px;
+        }
+
+        /* Blind spot representation */
+        .blind-spot {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px dashed var(--eci-accent);
+            border-radius: 50%;
+            top: 50px;
+            right: 20px;
+            opacity: 0.6;
+        }
+
+        .blind-spot::after {
+            content: '?';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-accent);
+        }
+
+        .line-element {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: var(--eci-charcoal);
+            opacity: 0.3;
+        }
+
+        .line-1 { top: 60px; left: -30px; transform: rotate(25deg); }
+        .line-2 { bottom: 80px; right: -20px; transform: rotate(-15deg); }
+        .line-3 { top: 50%; left: -40px; }
+
+        /* Main Title Area */
+        .title-area {
+            position: absolute;
+            top: 560px;
+            left: 0;
+            right: 0;
+            padding: 0 50px;
+        }
+
+        .theme-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4.2rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .main-title em {
+            font-style: italic;
+            color: var(--eci-gray);
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--eci-gray);
+            line-height: 1.6;
+            max-width: 480px;
+        }
+
+        /* Featured Articles */
+        .featured-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--eci-dark);
+            padding: 35px 50px;
+        }
+
+        .featured-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .featured-badge {
+            background: var(--eci-accent);
+            color: var(--eci-dark);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+        }
+
+        .featured-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--eci-white);
+            font-style: italic;
+        }
+
+        .article-list {
+            display: flex;
+            gap: 40px;
+        }
+
+        .article-item {
+            flex: 1;
+            padding-right: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .article-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .article-category {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--eci-white);
+            line-height: 1.4;
+        }
+
+        /* Barcode & Issue Info */
+        .issue-info {
+            position: absolute;
+            bottom: 180px;
+            right: 50px;
+            text-align: right;
+        }
+
+        .barcode {
+            width: 80px;
+            height: 50px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--eci-dark) 0px,
+                var(--eci-dark) 2px,
+                transparent 2px,
+                transparent 4px
+            );
+            margin-left: auto;
+            margin-bottom: 8px;
+        }
+
+        .issue-details {
+            font-size: 0.65rem;
+            color: var(--eci-gray);
+            letter-spacing: 1px;
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                padding: 0;
+                background: none;
+            }
+            .cover {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <!-- Header Band with Logo -->
+        <div class="header-band">
+            <div class="logo-container">
+                <img src="./ECI Insights — Cover — Volume 1, 2026_files/logo_ECI_top.png" alt="ECI Group" onerror="this.style.display=&#39;none&#39;">
+                <div class="logo-text">ECI <span>Insights</span></div>
+            </div>
+            <div class="header-right">
+                <div class="volume-label">Volume One</div>
+                <div class="volume-number">2026</div>
+            </div>
+        </div>
+
+        <!-- Visual Area with Illustration -->
+        <div class="visual-area">
+            <div class="illustration">
+                <div class="line-element line-1"></div>
+                <div class="line-element line-2"></div>
+                <div class="line-element line-3"></div>
+                <div class="eye-outer"></div>
+                <div class="eye-iris"></div>
+                <div class="eye-pupil"></div>
+                <div class="eye-reflection"></div>
+                <div class="blind-spot"></div>
+            </div>
+        </div>
+
+        <!-- Main Title -->
+        <div class="title-area">
+            <div class="theme-label">Global Perspectives on Executive Leadership</div>
+            <h1 class="main-title">Lucid Governance<br><em>What Boards Don't See</em></h1>
+            <p class="subtitle">Executive burnout, cultural blind spots, and the hidden forces shaping strategic decisions.</p>
+        </div>
+
+        <!-- Issue Info -->
+        <div class="issue-info">
+            <div class="barcode"></div>
+            <div class="issue-details">INAUGURAL ISSUE • 90 PAGES</div>
+        </div>
+
+        <!-- Featured Articles -->
+        <div class="featured-section">
+            <div class="featured-header">
+                <div class="featured-badge">Special Report</div>
+                <div class="featured-title">The Ecology of Power — From Overwork to Organizational Vigilance</div>
+            </div>
+            <div class="article-list">
+                <div class="article-item">
+                    <div class="article-category">Executive Health</div>
+                    <div class="article-title">When Burnout Becomes a Governance Risk</div>
+                </div>
+                <div class="article-item">
+                    <div class="article-category">Expert Insights</div>
+                    <div class="article-title">EU Directive 970: The Pay Transparency Imperative</div>
+                </div>
+                <div class="article-item">
+                    <div class="article-category">Strategic Focus</div>
+                    <div class="article-title">Culture: The Invisible Force Behind Strategy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

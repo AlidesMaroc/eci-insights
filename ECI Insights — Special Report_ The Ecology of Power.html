@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-dossier-opening.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Special Report: The Ecology of Power</title>
+    <link href="./ECI Insights — Special Report_ The Ecology of Power_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            /* ECI Core */
+            --eci-dark: #1a1a1a;
+            --eci-charcoal: #2d2d2d;
+            --eci-white: #ffffff;
+            --eci-accent: #c8a45c;
+            
+            /* Special Report Palette - Darker, more intense */
+            --sr-black: #0a0a0a;
+            --sr-deep: #121218;
+            --sr-charcoal: #1e1e24;
+            --sr-warm: #2a2428;
+            --sr-accent: #d4a853;
+            --sr-accent-dim: rgba(212, 168, 83, 0.6);
+            --sr-danger: #c45c4a;
+            --sr-danger-glow: rgba(196, 92, 74, 0.3);
+            --sr-text-primary: #f5f5f5;
+            --sr-text-secondary: rgba(255, 255, 255, 0.7);
+            --sr-text-muted: rgba(255, 255, 255, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 420mm 297mm;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #2a2a2a;
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Double Page Spread */
+        .spread {
+            width: 420mm;
+            height: 297mm;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--sr-black);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Left Page */
+        .page-left {
+            position: relative;
+            background: linear-gradient(135deg, var(--sr-deep) 0%, var(--sr-black) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            overflow: hidden;
+        }
+
+        /* Abstract Visual - Pressure/Tension Representation */
+        .visual-abstract {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        /* Concentric pressure rings */
+        .pressure-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid;
+            opacity: 0.15;
+        }
+
+        .ring-1 {
+            width: 800px;
+            height: 800px;
+            top: -200px;
+            left: -300px;
+            border-color: var(--sr-danger);
+        }
+
+        .ring-2 {
+            width: 600px;
+            height: 600px;
+            top: -100px;
+            left: -200px;
+            border-color: var(--sr-danger);
+            opacity: 0.2;
+        }
+
+        .ring-3 {
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: -100px;
+            border-color: var(--sr-accent);
+            opacity: 0.25;
+        }
+
+        .ring-4 {
+            width: 200px;
+            height: 200px;
+            top: 100px;
+            left: 0;
+            border-color: var(--sr-accent);
+            opacity: 0.4;
+        }
+
+        /* Fragmented lines suggesting breaking point */
+        .fragment-line {
+            position: absolute;
+            background: linear-gradient(90deg, var(--sr-danger) 0%, transparent 100%);
+            height: 1px;
+            opacity: 0.3;
+        }
+
+        .frag-1 { width: 150px; top: 30%; left: 10%; transform: rotate(-15deg); }
+        .frag-2 { width: 200px; top: 45%; left: 5%; transform: rotate(8deg); }
+        .frag-3 { width: 100px; top: 60%; left: 15%; transform: rotate(-5deg); }
+        .frag-4 { width: 180px; top: 75%; left: 8%; transform: rotate(12deg); }
+
+        /* Glow effect - center of pressure */
+        .pressure-center {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, var(--sr-danger-glow) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+
+        /* Left page content */
+        .left-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .dossier-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 50px;
+        }
+
+        .badge-line {
+            width: 40px;
+            height: 2px;
+            background: var(--sr-accent);
+        }
+
+        .badge-text {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--sr-accent);
+        }
+
+        .badge-pages {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--sr-text-muted);
+            margin-left: 10px;
+        }
+
+        .main-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 12rem;
+            font-weight: 300;
+            color: var(--sr-accent);
+            line-height: 0.8;
+            opacity: 0.15;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            z-index: 1;
+        }
+
+        .quote-section {
+            position: relative;
+            z-index: 2;
+            max-width: 380px;
+        }
+
+        .quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 8rem;
+            font-weight: 300;
+            color: var(--sr-accent);
+            line-height: 0.5;
+            opacity: 0.4;
+            margin-bottom: -20px;
+            display: block;
+        }
+
+        .quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            margin-bottom: 30px;
+        }
+
+        .quote-source {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        /* Statistics row */
+        .stats-row {
+            position: absolute;
+            bottom: 60px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            gap: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--sr-accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            margin-top: 8px;
+            line-height: 1.4;
+            max-width: 120px;
+        }
+
+        /* Page number left */
+        .page-num-left {
+            position: absolute;
+            bottom: 30px;
+            left: 60px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.9rem;
+            color: var(--sr-text-muted);
+        }
+
+        /* Right Page */
+        .page-right {
+            position: relative;
+            background: var(--sr-black);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 60px 60px 80px;
+            overflow: hidden;
+        }
+
+        /* Vertical accent line */
+        .vertical-accent {
+            position: absolute;
+            left: 0;
+            top: 10%;
+            bottom: 10%;
+            width: 4px;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                var(--sr-accent) 20%, 
+                var(--sr-accent) 80%, 
+                transparent 100%);
+        }
+
+        /* Right page background texture */
+        .texture-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 80% 20%, rgba(212, 168, 83, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(196, 92, 74, 0.02) 0%, transparent 40%);
+        }
+
+        .right-content {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+        }
+
+        .section-label {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sr-danger);
+            margin-bottom: 30px;
+        }
+
+        .title-block {
+            margin-bottom: 50px;
+        }
+
+        .title-main {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4.5rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+        }
+
+        .title-accent {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4.5rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--sr-accent);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-secondary);
+            line-height: 1.4;
+            margin-top: 30px;
+            padding-left: 25px;
+            border-left: 2px solid var(--sr-accent-dim);
+        }
+
+        /* Article list */
+        .articles-preview {
+            margin-top: 50px;
+        }
+
+        .articles-title {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+            margin-bottom: 25px;
+        }
+
+        .article-item {
+            display: grid;
+            grid-template-columns: 30px 1fr auto;
+            gap: 20px;
+            align-items: baseline;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-num {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--sr-accent);
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1.3;
+        }
+
+        .article-page {
+            font-size: 0.7rem;
+            color: var(--sr-text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* Page number right */
+        .page-num-right {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.9rem;
+            color: var(--sr-text-muted);
+        }
+
+        /* Running header */
+        .running-header {
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        /* Center fold indicator */
+        .fold-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.05) 20%,
+                rgba(255, 255, 255, 0.05) 80%,
+                transparent 100%);
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                padding: 0;
+                background: none;
+            }
+            .spread {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spread">
+        <!-- Center fold indicator -->
+        <div class="fold-line"></div>
+
+        <!-- LEFT PAGE -->
+        <div class="page-left">
+            <!-- Abstract visual elements -->
+            <div class="visual-abstract">
+                <div class="pressure-center"></div>
+                <div class="pressure-ring ring-1"></div>
+                <div class="pressure-ring ring-2"></div>
+                <div class="pressure-ring ring-3"></div>
+                <div class="pressure-ring ring-4"></div>
+                <div class="fragment-line frag-1"></div>
+                <div class="fragment-line frag-2"></div>
+                <div class="fragment-line frag-3"></div>
+                <div class="fragment-line frag-4"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="left-content">
+                <div class="dossier-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Special Report</span>
+                    <span class="badge-pages">40 Pages</span>
+                </div>
+
+                <div class="main-number">01</div>
+
+                <div class="quote-section">
+                    <span class="quote-mark">“</span>
+                    <p class="quote-text">The most dangerous risk a leader faces is the one they cannot see in themselves.</p>
+                    <p class="quote-source">Field Observation</p>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-value">76%</span>
+                    <span class="stat-label">of executives report burnout symptoms</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">2.5×</span>
+                    <span class="stat-label">higher turnover in burned-out leadership teams</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$322B</span>
+                    <span class="stat-label">annual cost of workplace stress globally</span>
+                </div>
+            </div>
+
+            <span class="page-num-left">06</span>
+        </div>
+
+        <!-- RIGHT PAGE -->
+        <div class="page-right">
+            <div class="texture-overlay"></div>
+            <div class="vertical-accent"></div>
+
+            <span class="running-header">ECI Insights • Volume 1</span>
+
+            <div class="right-content">
+                <div class="section-label">Governance Blind Spot</div>
+
+                <div class="title-block">
+                    <h1 class="title-main">The Ecology</h1>
+                    <h1 class="title-accent">of Power</h1>
+                    <p class="subtitle">From Overwork to Organizational Vigilance—What Boards Must Learn to See</p>
+                </div>
+
+                <div class="articles-preview">
+                    <div class="articles-title">In This Report</div>
+                    
+                    <div class="article-item">
+                        <span class="article-num">01</span>
+                        <span class="article-title">Executive Burnout: What if Governance Were to Blame?</span>
+                        <span class="article-page">p. 08</span>
+                    </div>
+                    
+                    <div class="article-item">
+                        <span class="article-num">02</span>
+                        <span class="article-title">The Myth of the Inexhaustible Leader</span>
+                        <span class="article-page">p. 14</span>
+                    </div>
+                    
+                    <div class="article-item">
+                        <span class="article-num">03</span>
+                        <span class="article-title">From Overwork to Organizational Vigilance: 6 Levers</span>
+                        <span class="article-page">p. 22</span>
+                    </div>
+                    
+                    <div class="article-item">
+                        <span class="article-num">04</span>
+                        <span class="article-title">Counselling and Mental Wellbeing in the Workplace</span>
+                        <span class="article-page">p. 30</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-num-right">07</span>
+        </div>
+    </div>
+
+
+</body></html>

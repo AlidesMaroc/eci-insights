@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-dossier-article3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — From Overwork to Organizational Vigilance: 6 Levers</title>
+    <link href="./ECI Insights — From Overwork to Organizational Vigilance_ 6 Levers_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --sr-black: #0a0a0a;
+            --sr-deep: #121218;
+            --sr-charcoal: #1e1e24;
+            --sr-warm: #2a2428;
+            --sr-accent: #d4a853;
+            --sr-accent-dim: rgba(212, 168, 83, 0.6);
+            --sr-accent-subtle: rgba(212, 168, 83, 0.1);
+            --sr-danger: #c45c4a;
+            --sr-danger-light: #d4756a;
+            --sr-danger-subtle: rgba(196, 92, 74, 0.1);
+            --sr-text-primary: #f5f5f5;
+            --sr-text-secondary: rgba(255, 255, 255, 0.7);
+            --sr-text-muted: rgba(255, 255, 255, 0.4);
+            --sr-text-dark: #1a1a1a;
+            --sr-bg-light: #f8f7f5;
+            --sr-bg-cream: #f5f3ef;
+            /* Article 3 - Solution-oriented, constructive */
+            --a3-primary: #1a3a2a;
+            --a3-secondary: #2d5a4a;
+            --a3-accent: #4a9a7a;
+            --a3-light: #e8f5f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #2a2a2a;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-inner {
+            position: absolute;
+            top: 60px;
+            left: 70px;
+            right: 70px;
+            bottom: 60px;
+            overflow: hidden;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 25px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pn-left { left: 70px; color: var(--sr-text-muted); }
+        .pn-right { right: 70px; color: var(--sr-text-muted); }
+        .pn-dark { color: rgba(0, 0, 0, 0.3); }
+
+        .running-header {
+            position: absolute;
+            top: 25px;
+            right: 70px;
+            font-size: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        .content-header-dark {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content-running {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .content-running-light {
+            color: var(--sr-text-muted);
+        }
+
+        .content-section {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+        }
+
+        /* ================================ */
+        /* PAGE 22 - VISUAL OPENING         */
+        /* ================================ */
+
+        .page-22 {
+            background: linear-gradient(160deg, var(--a3-primary) 0%, var(--sr-black) 100%);
+        }
+
+        /* Six pillars visualization */
+        .pillars-visual {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pillar {
+            position: absolute;
+            width: 3px;
+            background: linear-gradient(180deg, var(--a3-accent) 0%, transparent 100%);
+            opacity: 0.3;
+        }
+
+        .p-1 { height: 60%; left: 15%; top: 20%; }
+        .p-2 { height: 70%; left: 28%; top: 15%; opacity: 0.4; }
+        .p-3 { height: 80%; left: 41%; top: 10%; opacity: 0.5; }
+        .p-4 { height: 80%; left: 54%; top: 10%; opacity: 0.5; }
+        .p-5 { height: 70%; left: 67%; top: 15%; opacity: 0.4; }
+        .p-6 { height: 60%; left: 80%; top: 20%; }
+
+        .pillar-glow {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(74, 154, 122, 0.15) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .badge-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--a3-accent);
+            width: 34px;
+            height: 34px;
+            border: 2px solid var(--a3-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-label {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        .visual-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .visual-title-small {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+            margin-bottom: 15px;
+        }
+
+        .visual-title-main {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: var(--sr-text-primary);
+            line-height: 1.2;
+        }
+
+        .visual-title-main em {
+            color: var(--sr-accent);
+            font-style: italic;
+        }
+
+        .visual-title-sub {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--sr-text-secondary);
+            margin-top: 15px;
+        }
+
+        /* ================================ */
+        /* PAGE 23 - INTRO                  */
+        /* ================================ */
+
+        .page-23 {
+            background: var(--sr-black);
+        }
+
+        .vertical-accent {
+            position: absolute;
+            left: 30px;
+            top: 10%;
+            bottom: 10%;
+            width: 3px;
+            background: linear-gradient(180deg, transparent 0%, var(--a3-accent) 15%, var(--sr-accent) 85%, transparent 100%);
+        }
+
+        .article-section-label {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .article-title-accent {
+            color: var(--sr-accent);
+            font-style: italic;
+        }
+
+        .article-subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-secondary);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .intro-text {
+            font-size: 0.82rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 16px;
+        }
+
+        .intro-text p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 500;
+            float: left;
+            line-height: 0.75;
+            padding-right: 12px;
+            padding-top: 6px;
+            color: var(--a3-accent);
+        }
+
+        /* Levers preview */
+        .levers-preview {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .lever-preview-item {
+            background: rgba(74, 154, 122, 0.1);
+            border: 1px solid rgba(74, 154, 122, 0.2);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .lever-preview-num {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--a3-accent);
+        }
+
+        .lever-preview-name {
+            font-size: 0.55rem;
+            color: var(--sr-text-secondary);
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+
+        /* ================================ */
+        /* LEVER CARDS                      */
+        /* ================================ */
+
+        .page-light {
+            background: var(--sr-bg-light);
+        }
+
+        .page-cream {
+            background: var(--sr-bg-cream);
+        }
+
+        .lever-section {
+            margin-bottom: 30px;
+        }
+
+        .lever-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .lever-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--a3-accent);
+            line-height: 1;
+            min-width: 50px;
+        }
+
+        .lever-title-block {
+            flex: 1;
+        }
+
+        .lever-tag {
+            font-size: 0.45rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            background: var(--a3-accent);
+            padding: 3px 8px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .lever-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            line-height: 1.2;
+        }
+
+        .lever-content {
+            font-size: 0.8rem;
+            color: var(--sr-text-dark);
+            line-height: 1.7;
+        }
+
+        .lever-content p {
+            margin-bottom: 12px;
+        }
+
+        .lever-action-box {
+            background: var(--a3-light);
+            border-left: 3px solid var(--a3-accent);
+            padding: 15px 18px;
+            margin-top: 15px;
+        }
+
+        .lever-action-title {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--a3-primary);
+            margin-bottom: 8px;
+        }
+
+        .lever-action-list {
+            list-style: none;
+        }
+
+        .lever-action-item {
+            font-size: 0.72rem;
+            color: var(--sr-text-dark);
+            padding-left: 15px;
+            position: relative;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .lever-action-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--a3-accent);
+            font-weight: 600;
+        }
+
+        /* Pull quote */
+        .pull-quote-green {
+            background: rgba(74, 154, 122, 0.08);
+            padding: 18px 20px;
+            margin: 20px 0;
+            border-left: 3px solid var(--a3-accent);
+        }
+
+        .pull-quote-green p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--sr-text-dark);
+            line-height: 1.4;
+            margin: 0 !important;
+        }
+
+        /* ================================ */
+        /* PAGE 28 - IMPLEMENTATION         */
+        /* ================================ */
+
+        .page-28 {
+            background: var(--sr-deep);
+        }
+
+        .implementation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .impl-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 18px;
+        }
+
+        .impl-phase {
+            font-size: 0.45rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+            margin-bottom: 8px;
+        }
+
+        .impl-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--sr-text-primary);
+            margin-bottom: 8px;
+        }
+
+        .impl-desc {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            line-height: 1.5;
+        }
+
+        .impl-timeline {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(74, 154, 122, 0.1);
+            border: 1px solid rgba(74, 154, 122, 0.2);
+        }
+
+        .impl-timeline-title {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+            margin-bottom: 15px;
+        }
+
+        .timeline-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .timeline-period {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--sr-text-primary);
+            min-width: 80px;
+        }
+
+        .timeline-bar-bg {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .timeline-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--a3-accent) 0%, var(--sr-accent) 100%);
+            border-radius: 4px;
+        }
+
+        .timeline-label {
+            font-size: 0.55rem;
+            color: var(--sr-text-muted);
+            min-width: 100px;
+            text-align: right;
+        }
+
+        /* ================================ */
+        /* PAGE 29 - CLOSING                */
+        /* ================================ */
+
+        .page-29 {
+            background: linear-gradient(135deg, var(--a3-primary) 0%, var(--sr-black) 100%);
+        }
+
+        .quote-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(ellipse at center, rgba(74, 154, 122, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .big-quote {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+        }
+
+        .big-quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 8rem;
+            font-weight: 300;
+            color: var(--a3-accent);
+            line-height: 0.5;
+            opacity: 0.25;
+            display: block;
+            margin-bottom: -20px;
+        }
+
+        .big-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .big-quote-author {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--a3-accent);
+        }
+
+        .big-quote-role {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            margin-top: 5px;
+        }
+
+        .article-end-mark {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .end-line {
+            width: 35px;
+            height: 1px;
+            background: var(--a3-accent);
+            opacity: 0.5;
+        }
+
+        .end-icon {
+            width: 6px;
+            height: 6px;
+            background: var(--a3-accent);
+            transform: rotate(45deg);
+        }
+
+        /* Print */
+        @media print {
+            body { padding: 0; background: none; }
+            .page { box-shadow: none; page-break-after: always; }
+            .pages-container { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container">
+
+        <!-- PAGE 22 - VISUAL OPENING -->
+        <div class="page page-22">
+            <div class="pillars-visual">
+                <div class="pillar-glow"></div>
+                <div class="pillar p-1"></div>
+                <div class="pillar p-2"></div>
+                <div class="pillar p-3"></div>
+                <div class="pillar p-4"></div>
+                <div class="pillar p-5"></div>
+                <div class="pillar p-6"></div>
+            </div>
+
+            <div class="page-inner">
+                <div class="article-badge">
+                    <span class="badge-number">03</span>
+                    <span class="badge-label">Special Report • Article 3 of 4</span>
+                </div>
+
+                <div class="visual-title">
+                    <div class="visual-title-small">A Framework for Sustainable Leadership</div>
+                    <h1 class="visual-title-main">From Overwork to<br><em>Organizational Vigilance</em></h1>
+                    <p class="visual-title-sub">Six Levers to Prevent Burnout Without Infantilizing Leaders</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left">22</span>
+        </div>
+
+        <!-- PAGE 23 - INTRO -->
+        <div class="page page-23">
+            <div class="vertical-accent"></div>
+            <span class="running-header">ECI Insights • The Ecology of Power</span>
+
+            <div class="page-inner">
+                <div class="article-section-label">From Diagnosis to Action</div>
+                <h1 class="article-title">Building Systems That Protect<br><span class="article-title-accent">Without Patronizing</span></h1>
+                <p class="article-subtitle">The challenge is not to wrap executives in cotton wool—it is to create organizational conditions where sustainable excellence becomes possible.</p>
+
+                <div class="intro-text">
+                    <p>Having diagnosed the problem of executive burnout and deconstructed the myth of inexhaustible leadership, we now turn to solutions. But not the solutions typically offered—wellness programs, meditation apps, resilience workshops—that place the burden of prevention squarely on individual shoulders while leaving organizational systems unchanged.</p>
+                    <p>The six levers presented here operate at the system level. They require boards and executive teams to examine and modify the structures, incentives, and cultural norms that create the conditions for burnout. This is harder work than offering a yoga subscription, but it is the only work that produces lasting change.</p>
+                </div>
+
+                <div class="levers-preview">
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">01</div>
+                        <div class="lever-preview-name">Ritualized<br>Deceleration</div>
+                    </div>
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">02</div>
+                        <div class="lever-preview-name">Workload<br>Cartography</div>
+                    </div>
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">03</div>
+                        <div class="lever-preview-name">Energy-Based<br>Leadership</div>
+                    </div>
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">04</div>
+                        <div class="lever-preview-name">Recovery<br>Architecture</div>
+                    </div>
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">05</div>
+                        <div class="lever-preview-name">Distributed<br>Capacity</div>
+                    </div>
+                    <div class="lever-preview-item">
+                        <div class="lever-preview-num">06</div>
+                        <div class="lever-preview-name">Board-Level<br>Accountability</div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">23</span>
+        </div>
+
+        <!-- PAGE 24 - LEVERS 1 & 2 -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">01</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever One</span>
+                            <h3 class="lever-title">Ritualized Deceleration</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>High-performing organizations build recovery into their operating rhythm rather than leaving it to individual discretion. This means creating protected time for reflection, strategic thinking, and renewal that is structurally embedded rather than aspirational.</p>
+                        <p>The key word is “ritualized”—these practices must be predictable, protected, and modeled from the top. When the CEO visibly disconnects for strategic reflection, it signals permission throughout the organization.</p>
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">Quarterly “thinking weeks” with no operational meetings</li>
+                                <li class="lever-action-item">Protected morning hours for deep work (no meetings before 10am)</li>
+                                <li class="lever-action-item">Mandatory post-project recovery periods</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">02</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever Two</span>
+                            <h3 class="lever-title">Workload Cartography</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>You cannot manage what you cannot see. Most organizations have no systematic way of understanding the actual demands placed on their senior leaders—the accumulation of responsibilities, decisions, stakeholder relationships, and cognitive load.</p>
+                        <p>Workload cartography creates visibility into executive demands, enabling proactive redistribution before accumulation becomes unsustainable. This is not micromanagement; it is intelligent resource allocation.</p>
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">Annual “responsibility audit” for each executive role</li>
+                                <li class="lever-action-item">Regular board review of executive workload distribution</li>
+                                <li class="lever-action-item">Clear protocols for temporary load-shedding during crises</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">24</span>
+        </div>
+
+        <!-- PAGE 25 - LEVERS 3 & 4 -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">From Overwork to Organizational Vigilance</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">03</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever Three</span>
+                            <h3 class="lever-title">Energy-Based Leadership Metrics</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>Traditional performance metrics focus on outputs: revenue, margins, growth. But outputs are lagging indicators. By the time they decline, the damage to leadership capacity may already be done.</p>
+                        <p>Energy-based metrics track the inputs that enable sustained performance: decision quality over time, stakeholder relationship health, team engagement, and leader renewal patterns. These leading indicators provide early warning of capacity erosion.</p>
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">Quarterly “leadership energy” assessments (self and 360)</li>
+                                <li class="lever-action-item">Tracking decision quality patterns over time</li>
+                                <li class="lever-action-item">Monitoring recovery-to-intensity ratios</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">04</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever Four</span>
+                            <h3 class="lever-title">Recovery Architecture</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>Physical architecture shapes behavior. The same principle applies to organizational architecture. Recovery architecture means designing systems, spaces, and schedules that make renewal the path of least resistance rather than an act of rebellion.</p>
+
+                        <div class="pull-quote-green">
+                            <p>The goal is not to mandate recovery but to remove the barriers that make it feel impossible or career-limiting.</p>
+                        </div>
+
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">Executive sabbatical policies (not just permission—expectation)</li>
+                                <li class="lever-action-item">“Meeting-free” days embedded in corporate calendar</li>
+                                <li class="lever-action-item">Travel policies that build in recovery time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-right pn-dark">25</span>
+        </div>
+
+        <!-- PAGE 26 - LEVERS 5 & 6 -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">05</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever Five</span>
+                            <h3 class="lever-title">Distributed Leadership Capacity</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>Organizations that depend on a single leader’s continued capacity have built a single point of failure into their governance structure. Distributed capacity means building bench strength not as succession planning but as operational resilience.</p>
+                        <p>When leadership capacity is distributed, individual leaders can recover without creating organizational crisis. This requires genuine delegation of authority, not just tasks—a distinction many organizations fail to make.</p>
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">“Shadow” leadership for all critical roles (not deputies—genuine alternates)</li>
+                                <li class="lever-action-item">Rotating leadership of key initiatives</li>
+                                <li class="lever-action-item">Decision rights that don’t concentrate at the top</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lever-section">
+                    <div class="lever-header">
+                        <div class="lever-number">06</div>
+                        <div class="lever-title-block">
+                            <span class="lever-tag">Lever Six</span>
+                            <h3 class="lever-title">Board-Level Accountability</h3>
+                        </div>
+                    </div>
+                    <div class="lever-content">
+                        <p>None of the previous five levers will be implemented sustainably without board-level accountability. Executive wellbeing must become a governance matter, not an HR matter. This means regular board attention to leadership capacity, not just performance.</p>
+                        <p>Boards that take this responsibility seriously will find themselves asking different questions: not just “Are we hitting targets?” but “At what cost to leadership capacity are we hitting them?”</p>
+                        <div class="lever-action-box">
+                            <div class="lever-action-title">Practical Applications</div>
+                            <ul class="lever-action-list">
+                                <li class="lever-action-item">Executive wellbeing as standing board agenda item</li>
+                                <li class="lever-action-item">Compensation tied to sustainable performance metrics</li>
+                                <li class="lever-action-item">Board modeling of recovery and boundaries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">26</span>
+        </div>
+
+        <!-- PAGE 27 - SYNTHESIS -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">From Overwork to Organizational Vigilance</span>
+                    <span class="content-section">Special Report</span>
+                </div>
+
+                <div class="lever-content">
+                    <h3 style="font-family: &#39;Cormorant Garamond&#39;, Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--sr-text-dark); margin-bottom: 15px;">The Interdependence of Levers</h3>
+                    
+                    <p>These six levers are not independent interventions to be selected à la carte. They form an integrated system where each lever reinforces the others. Ritualized deceleration is meaningless without distributed capacity to absorb the load. Energy metrics are useless without board accountability to act on them.</p>
+
+                    <p>Organizations that attempt partial implementation often see initial enthusiasm followed by regression to old patterns. The pull of existing culture is too strong to be overcome by isolated initiatives. System-level change requires system-level intervention.</p>
+
+                    <div class="pull-quote-green">
+                        <p>The question is not whether your organization can afford to implement these levers. It is whether you can afford the cost of leadership burnout that will occur without them.</p>
+                    </div>
+
+                    <h3 style="font-family: &#39;Cormorant Garamond&#39;, Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--sr-text-dark); margin: 25px 0 15px 0;">The Role of the Board</h3>
+
+                    <p>Ultimately, these levers require board sponsorship to take root. Executive teams cannot reform the systems that govern their own performance without support from those who set expectations and hold accountability.</p>
+
+                    <p>Boards that recognize executive burnout as a governance risk will find themselves better positioned to sustain leadership excellence over time. Those that continue to treat it as an individual problem will continue to pay the hidden costs of impaired judgment, toxic cultures, and avoidable turnover.</p>
+
+                    <p>The choice is clear. The only question is whether boards will make it consciously or by default.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-right pn-dark">27</span>
+        </div>
+
+        <!-- PAGE 28 - IMPLEMENTATION -->
+        <div class="page page-28">
+            <div class="page-inner">
+                <div class="content-header content-header-dark">
+                    <span class="content-running content-running-light">From Overwork to Organizational Vigilance</span>
+                    <span class="content-section">Implementation</span>
+                </div>
+
+                <div class="infographic-label" style="color: var(--a3-accent);">Roadmap</div>
+                <h2 style="font-family: &#39;Cormorant Garamond&#39;, Georgia, serif; font-size: 1.4rem; font-weight: 500; color: var(--sr-text-primary); margin-bottom: 20px;">Implementation Framework</h2>
+
+                <div class="implementation-grid">
+                    <div class="impl-card">
+                        <div class="impl-phase">Phase 1: Months 1-3</div>
+                        <h4 class="impl-title">Diagnosis &amp; Design</h4>
+                        <p class="impl-desc">Assess current state of leadership capacity. Map existing workloads. Design pilot interventions. Secure board sponsorship.</p>
+                    </div>
+
+                    <div class="impl-card">
+                        <div class="impl-phase">Phase 2: Months 4-6</div>
+                        <h4 class="impl-title">Pilot &amp; Learn</h4>
+                        <p class="impl-desc">Implement levers with willing executive team members. Gather feedback. Refine approaches. Build internal case studies.</p>
+                    </div>
+
+                    <div class="impl-card">
+                        <div class="impl-phase">Phase 3: Months 7-12</div>
+                        <h4 class="impl-title">Scale &amp; Embed</h4>
+                        <p class="impl-desc">Extend successful practices across executive team. Embed in governance processes. Adjust compensation structures.</p>
+                    </div>
+
+                    <div class="impl-card">
+                        <div class="impl-phase">Phase 4: Year 2+</div>
+                        <h4 class="impl-title">Sustain &amp; Evolve</h4>
+                        <p class="impl-desc">Institutionalize as “how we work.” Continuous improvement. Extend principles to broader leadership population.</p>
+                    </div>
+                </div>
+
+                <div class="impl-timeline">
+                    <div class="impl-timeline-title">Expected Impact Timeline</div>
+                    
+                    <div class="timeline-row">
+                        <span class="timeline-period">Month 3</span>
+                        <div class="timeline-bar-bg">
+                            <div class="timeline-bar-fill" style="width: 25%;"></div>
+                        </div>
+                        <span class="timeline-label">Initial awareness shift</span>
+                    </div>
+
+                    <div class="timeline-row">
+                        <span class="timeline-period">Month 6</span>
+                        <div class="timeline-bar-bg">
+                            <div class="timeline-bar-fill" style="width: 45%;"></div>
+                        </div>
+                        <span class="timeline-label">Behavioral changes visible</span>
+                    </div>
+
+                    <div class="timeline-row">
+                        <span class="timeline-period">Month 12</span>
+                        <div class="timeline-bar-bg">
+                            <div class="timeline-bar-fill" style="width: 70%;"></div>
+                        </div>
+                        <span class="timeline-label">Cultural norms shifting</span>
+                    </div>
+
+                    <div class="timeline-row">
+                        <span class="timeline-period">Year 2</span>
+                        <div class="timeline-bar-bg">
+                            <div class="timeline-bar-fill" style="width: 90%;"></div>
+                        </div>
+                        <span class="timeline-label">Sustained integration</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">28</span>
+        </div>
+
+        <!-- PAGE 29 - CLOSING QUOTE -->
+        <div class="page page-29">
+            <div class="quote-glow"></div>
+            <span class="running-header">From Overwork to Organizational Vigilance</span>
+
+            <div class="big-quote">
+                <span class="big-quote-mark">“</span>
+                <p class="big-quote-text">Organizations that govern energy as carefully as they govern capital will outperform those that treat leadership capacity as an infinite resource.</p>
+                <p class="big-quote-author">ECI Research</p>
+                <p class="big-quote-role">The Ecology of Power, 2026</p>
+            </div>
+
+            <div class="article-end-mark">
+                <div class="end-line"></div>
+                <div class="end-icon"></div>
+                <div class="end-line"></div>
+            </div>
+
+            <span class="page-number pn-right">29</span>
+        </div>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-article-technical-leadership.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Technical Leadership Under Pressure</title>
+    <link href="./ECI Insights — Technical Leadership Under Pressure_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            /* ECI Group Brand Colors */
+            --eci-dark: #1a1a1a;
+            --eci-charcoal: #2d2d2d;
+            --eci-gray: #4a4a4a;
+            --eci-medium-gray: #767676;
+            --eci-light-gray: #e5e5e5;
+            --eci-off-white: #f8f7f5;
+            --eci-cream: #f5f3ef;
+            --eci-white: #ffffff;
+            --eci-accent: #c8a45c;
+            /* Engineering Theme */
+            --eng-primary: #1a4a5c;
+            --eng-secondary: #2d7a97;
+            --eng-light: #e8f4f8;
+            --eng-steel: #4a6572;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 210mm 297mm;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #d0d0d0;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--eci-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ======================= */
+        /* PAGE 1 - OPENING SPREAD */
+        /* ======================= */
+
+        .page-opening {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* Left Panel - Visual */
+        .opening-visual {
+            background: linear-gradient(160deg, var(--eng-primary) 0%, #0d2830 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        .opening-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(200,164,92,0.1) 0%, transparent 40%);
+        }
+
+        /* Blueprint Grid Pattern */
+        .blueprint-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Construction lines */
+        .construction-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .line {
+            position: absolute;
+            background: rgba(200, 164, 92, 0.15);
+        }
+
+        .line-1 { width: 200px; height: 2px; top: 80px; left: -50px; transform: rotate(35deg); }
+        .line-2 { width: 150px; height: 2px; top: 200px; right: -30px; transform: rotate(-25deg); }
+        .line-3 { width: 180px; height: 2px; bottom: 150px; left: 20px; transform: rotate(15deg); }
+        .line-4 { width: 3px; height: 120px; top: 100px; right: 60px; }
+        .line-5 { width: 3px; height: 80px; bottom: 200px; left: 80px; }
+
+        .sector-badge {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin-bottom: auto;
+        }
+
+        .sector-badge-label {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 8px;
+        }
+
+        .sector-badge-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--eci-white);
+            line-height: 1.2;
+        }
+
+        .visual-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--eci-accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+
+        .visual-quote {
+            border-left: 3px solid var(--eci-accent);
+            padding-left: 20px;
+        }
+
+        .quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--eci-white);
+            line-height: 1.4;
+        }
+
+        /* Right Panel - Content */
+        .opening-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eci-white);
+            background: var(--eci-accent);
+            padding: 6px 12px;
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .article-subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--eci-gray);
+            line-height: 1.4;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: var(--eci-charcoal);
+            line-height: 1.85;
+            flex: 1;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .intro-text p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4rem;
+            font-weight: 600;
+            float: left;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 5px;
+            color: var(--eng-primary);
+        }
+
+        .context-box {
+            background: var(--eng-light);
+            padding: 25px;
+            margin-top: auto;
+            border-left: 4px solid var(--eng-primary);
+        }
+
+        .context-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eng-primary);
+            margin-bottom: 12px;
+        }
+
+        .context-text {
+            font-size: 0.85rem;
+            color: var(--eci-charcoal);
+            line-height: 1.6;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--eci-medium-gray);
+        }
+
+        .page-number-left { left: 50px; }
+        .page-number-right { right: 50px; }
+
+        /* ======================= */
+        /* PAGE 2 - KEY CHALLENGES */
+        /* ======================= */
+
+        .page-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .running-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--eci-light-gray);
+            margin-bottom: 40px;
+        }
+
+        .running-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-medium-gray);
+        }
+
+        .running-section {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+        }
+
+        .content-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 30px;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .challenge-card {
+            padding: 25px;
+            background: var(--eci-off-white);
+            position: relative;
+            border-left: 4px solid var(--eng-primary);
+        }
+
+        .challenge-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--eng-primary);
+            opacity: 0.3;
+            margin-bottom: 10px;
+        }
+
+        .challenge-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 10px;
+        }
+
+        .challenge-text {
+            font-size: 0.8rem;
+            color: var(--eci-gray);
+            line-height: 1.6;
+        }
+
+        /* Company Card */
+        .company-card {
+            background: linear-gradient(135deg, var(--eci-dark) 0%, var(--eci-charcoal) 100%);
+            padding: 35px;
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .company-logo-area {
+            width: 120px;
+            height: 80px;
+            background: var(--eci-white);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .company-logo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--eng-primary);
+            letter-spacing: 2px;
+        }
+
+        .company-info {
+            color: var(--eci-white);
+        }
+
+        .company-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .company-tagline {
+            font-size: 0.8rem;
+            color: var(--eci-accent);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .company-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .company-stat {
+            text-align: left;
+        }
+
+        .company-stat-value {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--eci-accent);
+        }
+
+        .company-stat-label {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .company-description {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+            margin-top: 12px;
+            grid-column: span 2;
+        }
+
+        /* ======================= */
+        /* PAGE 3 - INTERVIEW */
+        /* ======================= */
+
+        .page-interview {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .interview-header {
+            display: flex;
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        /* Interviewee Card */
+        .interviewee-card {
+            width: 260px;
+            flex-shrink: 0;
+            background: linear-gradient(145deg, var(--eng-primary) 0%, #0d2830 100%);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interviewee-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(200, 164, 92, 0.1);
+            border-radius: 50%;
+        }
+
+        .interviewee-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(200, 164, 92, 0.05);
+            border-radius: 50%;
+        }
+
+        .interviewee-photo {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--eci-accent);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .interviewee-initials {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-white);
+        }
+
+        .interviewee-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--eci-white);
+            text-align: center;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-role {
+            font-size: 0.75rem;
+            color: var(--eci-accent);
+            text-align: center;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-company {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-bio {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .interviewee-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .credential-tag {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            background: rgba(200, 164, 92, 0.2);
+            color: var(--eci-accent);
+            border-radius: 3px;
+        }
+
+        .interview-intro {
+            flex: 1;
+        }
+
+        .interview-label {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eng-primary);
+            background: var(--eng-light);
+            padding: 6px 12px;
+            margin-bottom: 15px;
+        }
+
+        .interview-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .interview-subtitle {
+            font-size: 0.9rem;
+            color: var(--eci-gray);
+            line-height: 1.6;
+        }
+
+        /* Q&A Section */
+        .qa-section {
+            flex: 1;
+        }
+
+        .qa-item {
+            margin-bottom: 25px;
+        }
+
+        .qa-question {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 12px;
+            padding-left: 20px;
+            border-left: 3px solid var(--eng-primary);
+        }
+
+        .qa-answer {
+            font-size: 0.85rem;
+            color: var(--eci-charcoal);
+            line-height: 1.75;
+            padding-left: 20px;
+        }
+
+        /* ======================= */
+        /* PAGE 4 - INTERVIEW CONT */
+        /* ======================= */
+
+        .pull-quote-large {
+            background: var(--eng-light);
+            padding: 40px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .pull-quote-large::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 6rem;
+            color: var(--eng-primary);
+            opacity: 0.15;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .pull-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--eci-dark);
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pull-quote-author {
+            font-size: 0.75rem;
+            color: var(--eng-primary);
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .key-takeaways {
+            background: var(--eci-off-white);
+            padding: 30px;
+            margin-top: 25px;
+        }
+
+        .takeaways-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 20px;
+        }
+
+        .takeaway-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .takeaway-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .takeaway-number {
+            width: 24px;
+            height: 24px;
+            background: var(--eng-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .takeaway-number span {
+            color: var(--eci-white);
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .takeaway-text {
+            font-size: 0.85rem;
+            color: var(--eci-charcoal);
+            line-height: 1.5;
+        }
+
+        /* End mark */
+        .end-mark {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--eci-light-gray);
+        }
+
+        .end-mark-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--eci-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .end-mark-icon span {
+            color: var(--eci-white);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .end-mark-text {
+            font-size: 0.7rem;
+            color: var(--eci-medium-gray);
+            font-style: italic;
+        }
+
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--eci-light-gray);
+        }
+
+        .footer-left {
+            font-size: 0.6rem;
+            color: var(--eci-medium-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Print */
+        @media print {
+            body { padding: 0; background: none; }
+            .page { box-shadow: none; page-break-after: always; }
+            .pages-container { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container">
+
+        <!-- PAGE 1: Opening Spread -->
+        <div class="page page-opening">
+            <!-- Left Visual Panel -->
+            <div class="opening-visual">
+                <div class="blueprint-grid"></div>
+                <div class="construction-lines">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                    <div class="line line-4"></div>
+                    <div class="line line-5"></div>
+                </div>
+
+                <div class="sector-badge">
+                    <div class="sector-badge-label">Sector Focus</div>
+                    <div class="sector-badge-title">Engineering &amp;<br>Construction</div>
+                </div>
+
+                <div class="visual-content">
+                    <div class="visual-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">73%</div>
+                            <div class="stat-label">of E&amp;C firms struggle to fill technical roles</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10yr</div>
+                            <div class="stat-label">average tenure of retiring technical directors</div>
+                        </div>
+                    </div>
+                    <div class="visual-quote">
+                        <p class="quote-text">When technical talent becomes scarce, it's no longer an HR issue—it's a governance imperative.</p>
+                    </div>
+                </div>
+
+                <span class="page-number page-number-left" style="color: rgba(255,255,255,0.5);">66</span>
+            </div>
+
+            <!-- Right Content Panel -->
+            <div class="opening-content">
+                <div class="section-header">
+                    <div class="section-label">Expert Insights</div>
+                    <h1 class="article-title">Technical Leadership Under Pressure</h1>
+                    <p class="article-subtitle">Why Talent Has Become a Governance Issue in Engineering &amp; Construction</p>
+                </div>
+
+                <div class="intro-text">
+                    <p>The Engineering and Construction sector stands at an inflection point. Accelerating infrastructure investment, the energy transition, and digital transformation are driving unprecedented demand for technical expertise—at precisely the moment when demographic shifts are depleting the talent pipeline.</p>
+                    <p>For boards and executive committees, this is no longer a workforce planning challenge to delegate to HR. Talent scarcity in E&amp;C has become a strategic constraint that shapes which projects can be pursued, which markets can be entered, and ultimately, which companies will thrive.</p>
+                    <p>We spoke with Alessia Formato, Operations Director at AECOM Italy, about how the role of technical leadership is evolving—and what governance implications follow.</p>
+                </div>
+
+                <div class="context-box">
+                    <div class="context-title">The Talent Equation</div>
+                    <p class="context-text">The global infrastructure gap is estimated at $15 trillion through 2040. Yet the engineering workforce is aging rapidly, with 25% of licensed engineers expected to retire within the next decade. The competition for remaining talent is reshaping competitive dynamics across the sector.</p>
+                </div>
+
+                <span class="page-number page-number-right">67</span>
+            </div>
+        </div>
+
+        <!-- PAGE 2: Key Challenges + Company Card -->
+        <div class="page">
+            <div class="page-content">
+                <div class="running-header">
+                    <span class="running-title">ECI Insights • Volume 1</span>
+                    <span class="running-section">Expert Insights</span>
+                </div>
+
+                <h2 class="content-title">Four Forces Reshaping Technical Leadership</h2>
+
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-number">01</div>
+                        <h3 class="challenge-title">The Demographic Cliff</h3>
+                        <p class="challenge-text">A generation of senior technical leaders is approaching retirement, taking decades of institutional knowledge with them. Succession planning has not kept pace with the wave of departures.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-number">02</div>
+                        <h3 class="challenge-title">Expanding Scope of Expertise</h3>
+                        <p class="challenge-text">Technical Directors must now master not only engineering fundamentals but also digital tools, sustainability requirements, and complex stakeholder management—a rare combination.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-number">03</div>
+                        <h3 class="challenge-title">Project Complexity</h3>
+                        <p class="challenge-text">Mega-projects increasingly require cross-disciplinary integration, regulatory navigation, and risk management skills that go far beyond traditional technical competence.</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-number">04</div>
+                        <h3 class="challenge-title">Compensation Pressure</h3>
+                        <p class="challenge-text">Competition from technology, energy, and adjacent sectors is inflating compensation expectations for top technical talent, challenging traditional E&amp;C pay structures.</p>
+                    </div>
+                </div>
+
+                <!-- AECOM Company Card -->
+                <div class="company-card">
+                    <div class="company-logo-area">
+                        <span class="company-logo-text">AECOM</span>
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company-name">AECOM</h3>
+                        <p class="company-tagline">"Delivering a better world"</p>
+                        <div class="company-stats">
+                            <div class="company-stat">
+                                <div class="company-stat-value">$16.1B</div>
+                                <div class="company-stat-label">Revenue</div>
+                            </div>
+                            <div class="company-stat">
+                                <div class="company-stat-value">51,000</div>
+                                <div class="company-stat-label">Employees</div>
+                            </div>
+                            <div class="company-stat">
+                                <div class="company-stat-value">150+</div>
+                                <div class="company-stat-label">Countries</div>
+                            </div>
+                            <div class="company-stat">
+                                <div class="company-stat-value">#1</div>
+                                <div class="company-stat-label">ENR Design Firm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="company-description">AECOM is the world's trusted infrastructure consulting firm, delivering professional services throughout the project lifecycle—from advisory, planning, design and engineering to program and construction management. A Fortune 500 company, AECOM is ranked #1 globally in design by Engineering News-Record for buildings, transportation, and water.</p>
+                </div>
+
+                <span class="page-number page-number-right">68</span>
+            </div>
+        </div>
+
+        <!-- PAGE 3: Interview Part 1 -->
+        <div class="page page-interview">
+            <div class="running-header">
+                <span class="running-title">ECI Insights • Volume 1</span>
+                <span class="running-section">Expert Insights — Interview</span>
+            </div>
+
+            <div class="interview-header">
+                <!-- Interviewee Card -->
+                <div class="interviewee-card">
+                    <div class="interviewee-photo">
+                        <span class="interviewee-initials">AF</span>
+                    </div>
+                    <h3 class="interviewee-name">Alessia Formato</h3>
+                    <p class="interviewee-role">Operations Director B+P</p>
+                    <p class="interviewee-company">AECOM — Milan, Italy</p>
+                    <p class="interviewee-bio">Over 20 years of experience in project management and technical consultancy. Alessia leads budget preparation, international team coordination, and business development across industrial, infrastructure, and financial sectors.</p>
+                    <div class="interviewee-credentials">
+                        <span class="credential-tag">MSc Environmental Eng.</span>
+                        <span class="credential-tag">Politecnico di Milano</span>
+                    </div>
+                </div>
+
+                <div class="interview-intro">
+                    <div class="interview-label">Expert Interview</div>
+                    <h2 class="interview-title">The Evolving Role of Technical Directors</h2>
+                    <p class="interview-subtitle">We spoke with Alessia Formato, Operations Director at AECOM Italy, about how technical leadership is changing—and why executive search must adapt to a new reality in the Engineering &amp; Construction sector.</p>
+                </div>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">How has the role of Technical Director evolved over your two decades in the industry?</p>
+                    <p class="qa-answer">When I started, technical excellence was the primary—almost the only—criterion. Today, a Technical Director must be a hybrid: deep technical competence remains essential, but it must be combined with project management skills, stakeholder management, regulatory expertise, and increasingly, digital fluency. The role has expanded dramatically while the pool of qualified candidates has not kept pace.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">What makes talent acquisition particularly challenging in E&amp;C right now?</p>
+                    <p class="qa-answer">Three converging factors. First, demographics—we're losing a generation of experienced leaders to retirement faster than we can develop replacements. Second, competition—tech companies, energy firms, and consulting groups are all pursuing the same profiles. Third, expectations—younger engineers want purpose, flexibility, and development opportunities, not just compensation. Companies that can't offer all three will struggle to attract and retain top talent.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">You mentioned regulatory expertise. How significant is that dimension?</p>
+                    <p class="qa-answer">It's become critical. Environmental permitting, safety compliance, sustainability reporting—these aren't peripheral concerns anymore. A Technical Director who can navigate regulatory bodies, manage approval processes, and anticipate policy shifts is worth their weight in gold. This is especially true in complex projects involving multiple jurisdictions.</p>
+                </div>
+            </div>
+
+            <span class="page-number page-number-right">69</span>
+        </div>
+
+        <!-- PAGE 4: Interview Part 2 + Conclusion -->
+        <div class="page page-interview">
+            <div class="running-header">
+                <span class="running-title">ECI Insights • Volume 1</span>
+                <span class="running-section">Expert Insights — Interview</span>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">What should boards understand about technical talent that they often miss?</p>
+                    <p class="qa-answer">That it's a strategic asset, not a commodity to be sourced on demand. When a key Technical Director leaves, you don't just lose skills—you lose relationships, institutional memory, and often, client confidence. Boards need to treat technical leadership succession with the same rigor they apply to CEO succession. The talent pipeline should be a standing agenda item, not an afterthought.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">How can executive search add value in this context?</p>
+                    <p class="qa-answer">By going beyond matching CVs to job descriptions. The best search partners understand the sector's dynamics, can assess both technical depth and leadership potential, and recognize cultural fit. They can also help companies articulate what makes them attractive to top candidates—which is often not what leadership assumes. In a scarce talent market, search is as much about selling the opportunity as finding the right person.</p>
+                </div>
+            </div>
+
+            <div class="pull-quote-large">
+                <p class="pull-quote-text">Boards need to treat technical leadership succession with the same rigor they apply to CEO succession. The talent pipeline should be a standing agenda item, not an afterthought.</p>
+                <p class="pull-quote-author">— Alessia Formato, AECOM</p>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">Looking ahead, what capabilities will define the next generation of technical leaders?</p>
+                    <p class="qa-answer">Beyond core engineering skills, I'd emphasize three things: digital fluency—not just using tools but understanding how AI and data analytics are transforming project delivery; sustainability literacy—the ability to integrate ESG considerations into technical decisions; and what I'd call "translation skills"—the capacity to communicate complex technical matters to non-technical stakeholders, including boards, investors, and communities.</p>
+                </div>
+            </div>
+
+            <div class="key-takeaways">
+                <div class="takeaways-title">Key Takeaways for Boards</div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>1</span></div>
+                    <p class="takeaway-text">Elevate technical talent to strategic agenda—scarcity is a governance issue, not just HR</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>2</span></div>
+                    <p class="takeaway-text">Plan technical succession with CEO-level rigor and long-term horizons</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>3</span></div>
+                    <p class="takeaway-text">Recognize the expanded skill set required: technical depth + digital + sustainability + communication</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>4</span></div>
+                    <p class="takeaway-text">Partner with search specialists who understand sector dynamics and candidate motivations</p>
+                </div>
+            </div>
+
+            <div class="end-mark">
+                <div class="end-mark-icon"><span>■</span></div>
+                <p class="end-mark-text">Alessia Formato is Operations Director B+P at AECOM Italy. She holds an MSc in Environmental Engineering from Politecnico di Milano.</p>
+            </div>
+
+            <footer class="page-footer">
+                <span class="footer-left">Technical Leadership Under Pressure</span>
+                <span class="page-number" style="position: static;">70</span>
+            </footer>
+        </div>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Editorial — Volume 1, 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --eci-dark: #1a1a1a;
+            --eci-charcoal: #2d2d2d;
+            --eci-gray: #4a4a4a;
+            --eci-gray-light: #6b6b6b;
+            --eci-gray-muted: #999999;
+            --eci-white: #ffffff;
+            --eci-accent: #c8a45c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 210mm 297mm;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--eci-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .page-content {
+            position: absolute;
+            top: 60px;
+            bottom: 60px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .editorial-header {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--eci-gray-muted);
+        }
+
+        .editorial-label {
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 15px;
+        }
+
+        .editorial-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--eci-dark);
+            line-height: 1.3;
+        }
+
+        /* Editorial Text */
+        .editorial-body {
+            flex: 1;
+            columns: 2;
+            column-gap: 35px;
+        }
+
+        .editorial-body p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--eci-gray);
+            line-height: 1.75;
+            margin-bottom: 14px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .editorial-body p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            float: left;
+            line-height: 0.8;
+            padding-right: 10px;
+            padding-top: 5px;
+            color: var(--eci-dark);
+        }
+
+        /* Signature Block */
+        .signature-block {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid var(--eci-gray-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .signature-photo {
+            width: 70px;
+            height: 70px;
+            background: var(--eci-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .signature-initials {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--eci-white);
+        }
+
+        .signature-info {
+            flex: 1;
+        }
+
+        .signature-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 3px;
+        }
+
+        .signature-title {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--eci-accent);
+            margin-bottom: 8px;
+        }
+
+        .signature-bio {
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: var(--eci-gray-light);
+            line-height: 1.6;
+        }
+
+        /* Page Number */
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--eci-gray-muted);
+        }
+
+        /* Running Header */
+        .running-header {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-gray-muted);
+        }
+
+        /* Print */
+        @media print {
+            body {
+                padding: 0;
+                background: none;
+            }
+            .page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <span class="running-header">ECI Insights • Volume 1</span>
+
+        <div class="page-content">
+            <!-- Header -->
+            <div class="editorial-header">
+                <div class="editorial-label">From the President</div>
+                <h1 class="editorial-title">Seeing What Power Tends to Miss</h1>
+            </div>
+
+            <!-- Editorial Body -->
+            <div class="editorial-body">
+                <p>Leadership is often described in terms of vision. Yet, in practice, what shapes organizations most profoundly is not what leaders see—but what they systematically overlook.</p>
+
+                <p>Boards and executive teams operate in environments of increasing complexity: regulatory pressure, geopolitical uncertainty, technological acceleration, and rising expectations around responsibility and transparency. In this context, decision-making frameworks have become more sophisticated, data richer, governance structures more formalized. And still, a persistent gap remains between strategic intent and human impact.</p>
+
+                <p>This inaugural volume of ECI Insights starts from a simple observation: many of today's organizational risks are not technical failures, but perceptual ones. Burnout does not emerge from individual fragility alone. Cultural drift does not result from a lack of values. Power rarely concentrates because of malice. These phenomena take root in blind spots—structural, cognitive, and relational—that conventional governance models tend to normalize rather than interrogate.</p>
+
+                <p>Across the contributions assembled in this issue, a common thread emerges. Whether examining executive exhaustion, the mythology of limitless leadership, the unintended consequences of performance systems, or the silent mechanics of power, the question is not what leaders intend, but what their systems allow—and sometimes encourage—to happen.</p>
+
+                <p>This magazine does not aim to provide ready-made answers. It does not advocate a new leadership trend, nor propose a universal framework. Its ambition is more restrained—and more demanding. It seeks to slow the reader down. To create space for reflection. To surface patterns that are often felt but rarely articulated.</p>
+
+                <p>ECI Insights is conceived as a place where governance, leadership, and human experience can be examined together, without simplification and without moralizing. Where organizational performance is not separated from its human cost, but understood as inseparable from it. Where power is treated not as a status, but as a system with consequences.</p>
+
+                <p>If there is a single invitation in these pages, it is this: to look again at what appears familiar, and question what has become invisible through habit.</p>
+
+                <p>In a time that rewards speed, decisiveness, and certainty, we believe there is strategic value in restraint, in inquiry, and in thoughtful doubt. This publication is an expression of that belief.</p>
+            </div>
+
+            <!-- Signature -->
+            <div class="signature-block">
+                <div class="signature-photo">
+                    <span class="signature-initials">MM</span>
+                </div>
+                <div class="signature-info">
+                    <div class="signature-name">Marcus Meyer</div>
+                    <div class="signature-title">President, ECI Group</div>
+                    <div class="signature-bio">Founder of Meyer & Söhne, member of AESC European Council. Over 30 years of experience in executive search across Europe and Asia.</div>
+                </div>
+            </div>
+        </div>
+
+        <span class="page-number">02</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-article-culture.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — Culture: What Boards Don't See</title>
+    <link href="./ECI Insights — Culture_ What Boards Don&#39;t See_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --sr-black: #0a0a0a;
+            --sr-deep: #121218;
+            --sr-charcoal: #1e1e24;
+            --sr-accent: #d4a853;
+            --sr-accent-dim: rgba(212, 168, 83, 0.6);
+            --sr-text-primary: #f5f5f5;
+            --sr-text-secondary: rgba(255, 255, 255, 0.7);
+            --sr-text-muted: rgba(255, 255, 255, 0.4);
+            --sr-text-dark: #1a1a1a;
+            --sr-bg-light: #f8f7f5;
+            --sr-bg-cream: #f5f3ef;
+            /* Culture Article - Deep purple/violet for the invisible */
+            --cult-primary: #1a1a2e;
+            --cult-secondary: #2d2d4a;
+            --cult-deep: #16162a;
+            --cult-accent: #9d8cff;
+            --cult-accent-dim: rgba(157, 140, 255, 0.5);
+            --cult-warm: #ff8c94;
+            --cult-glow: rgba(157, 140, 255, 0.15);
+            --cult-light: #f5f4ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #2a2a2a;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-inner {
+            position: absolute;
+            top: 60px;
+            left: 70px;
+            right: 70px;
+            bottom: 60px;
+            overflow: hidden;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 25px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pn-left { left: 70px; color: var(--sr-text-muted); }
+        .pn-right { right: 70px; color: var(--sr-text-muted); }
+        .pn-dark { color: rgba(0, 0, 0, 0.3); }
+
+        .running-header {
+            position: absolute;
+            top: 25px;
+            right: 70px;
+            font-size: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-text-muted);
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        .content-header-dark {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content-running {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .content-running-light {
+            color: var(--sr-text-muted);
+        }
+
+        .content-section {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+        }
+
+        /* ================================ */
+        /* PAGE 66 - DRAMATIC OPENING       */
+        /* ================================ */
+
+        .page-66 {
+            background: var(--cult-primary);
+        }
+
+        /* Iceberg visual - the invisible beneath */
+        .iceberg-visual {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        /* Water line */
+        .waterline {
+            position: absolute;
+            top: 45%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--cult-accent-dim) 20%, var(--cult-accent-dim) 80%, transparent 100%);
+        }
+
+        /* Visible tip */
+        .iceberg-tip {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        /* Hidden mass */
+        .iceberg-mass {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 350px;
+            background: linear-gradient(180deg, rgba(157, 140, 255, 0.3) 0%, rgba(157, 140, 255, 0.05) 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 95% 30%, 100% 60%, 85% 100%, 15% 100%, 0% 60%, 5% 30%);
+            filter: blur(1px);
+        }
+
+        /* Depth glow */
+        .depth-glow {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(ellipse at center, var(--cult-glow) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+
+        /* Labels */
+        .iceberg-label {
+            position: absolute;
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .label-visible {
+            top: 18%;
+            right: 25%;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .label-hidden {
+            top: 55%;
+            right: 20%;
+            color: var(--cult-accent);
+        }
+
+        .opening-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--cult-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .badge-text {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+        }
+
+        .opening-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .opening-eyebrow {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--cult-warm);
+            margin-bottom: 15px;
+        }
+
+        .opening-main {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--sr-text-primary);
+            line-height: 1.1;
+        }
+
+        .opening-main em {
+            color: var(--cult-accent);
+            font-style: italic;
+        }
+
+        /* ================================ */
+        /* PAGE 67 - TITLE SPREAD           */
+        /* ================================ */
+
+        .page-67 {
+            background: var(--sr-black);
+        }
+
+        .vertical-accent {
+            position: absolute;
+            left: 30px;
+            top: 10%;
+            bottom: 10%;
+            width: 3px;
+            background: linear-gradient(180deg, transparent 0%, var(--cult-accent) 15%, var(--sr-accent) 85%, transparent 100%);
+        }
+
+        .article-section-label {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .article-title-accent {
+            color: var(--cult-accent);
+            font-style: italic;
+        }
+
+        .article-subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-secondary);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .intro-text {
+            font-size: 0.82rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.8;
+        }
+
+        .intro-text p {
+            margin-bottom: 16px;
+        }
+
+        .intro-text p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 500;
+            float: left;
+            line-height: 0.75;
+            padding-right: 12px;
+            padding-top: 6px;
+            color: var(--cult-accent);
+        }
+
+        /* Drucker quote box */
+        .quote-box {
+            background: rgba(157, 140, 255, 0.1);
+            border: 1px solid rgba(157, 140, 255, 0.2);
+            padding: 20px;
+            margin-top: 25px;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4rem;
+            color: var(--cult-accent);
+            opacity: 0.3;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            line-height: 1;
+        }
+
+        .quote-box-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            padding-left: 30px;
+        }
+
+        .quote-box-author {
+            font-size: 0.65rem;
+            color: var(--cult-accent);
+            margin-top: 12px;
+            padding-left: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* ================================ */
+        /* BODY PAGES                       */
+        /* ================================ */
+
+        .page-light {
+            background: var(--sr-bg-light);
+        }
+
+        .page-cream {
+            background: var(--sr-bg-cream);
+        }
+
+        .body-text {
+            font-size: 0.82rem;
+            color: var(--sr-text-dark);
+            line-height: 1.75;
+        }
+
+        .body-text p {
+            margin-bottom: 14px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .body-text h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            margin: 22px 0 12px 0;
+        }
+
+        /* Pull quote purple */
+        .pull-quote-purple {
+            background: var(--cult-light);
+            padding: 18px 20px;
+            margin: 20px 0;
+            border-left: 3px solid var(--cult-accent);
+        }
+
+        .pull-quote-purple p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--sr-text-dark);
+            line-height: 1.4;
+            margin: 0 !important;
+        }
+
+        /* ================================ */
+        /* PAGE 69 - CULTURE LAYERS         */
+        /* ================================ */
+
+        .page-69 {
+            background: var(--cult-deep);
+        }
+
+        .layers-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            margin-bottom: 25px;
+        }
+
+        .culture-layers {
+            position: relative;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .layer {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        .layer-1 {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .layer-2 {
+            background: rgba(157, 140, 255, 0.15);
+            border: 1px solid rgba(157, 140, 255, 0.2);
+            margin-left: 30px;
+        }
+
+        .layer-3 {
+            background: rgba(157, 140, 255, 0.1);
+            border: 1px solid rgba(157, 140, 255, 0.15);
+            margin-left: 60px;
+        }
+
+        .layer-4 {
+            background: rgba(157, 140, 255, 0.05);
+            border: 1px solid rgba(157, 140, 255, 0.1);
+            margin-left: 90px;
+        }
+
+        .layer-depth {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--cult-accent);
+            min-width: 40px;
+            opacity: 0.5;
+        }
+
+        .layer-content {
+            flex: 1;
+        }
+
+        .layer-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--sr-text-primary);
+            margin-bottom: 4px;
+        }
+
+        .layer-desc {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            line-height: 1.4;
+        }
+
+        .layer-visibility {
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 3px;
+        }
+
+        .vis-high {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .vis-medium {
+            background: rgba(157, 140, 255, 0.3);
+            color: var(--cult-accent);
+        }
+
+        .vis-low {
+            background: rgba(157, 140, 255, 0.15);
+            color: var(--cult-accent-dim);
+        }
+
+        .layers-legend {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-arrow {
+            font-size: 1rem;
+            color: var(--cult-accent);
+        }
+
+        .legend-text {
+            font-size: 0.55rem;
+            color: var(--sr-text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ================================ */
+        /* PAGE 70 - BLIND SPOTS            */
+        /* ================================ */
+
+        .blindspot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .blindspot-card {
+            background: white;
+            padding: 18px;
+            border-left: 3px solid var(--cult-accent);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .blindspot-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--cult-accent);
+            opacity: 0.5;
+            margin-bottom: 8px;
+        }
+
+        .blindspot-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            margin-bottom: 8px;
+        }
+
+        .blindspot-desc {
+            font-size: 0.68rem;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.5;
+        }
+
+        /* ================================ */
+        /* PAGE 71 - CASE STUDIES           */
+        /* ================================ */
+
+        .page-71 {
+            background: var(--cult-secondary);
+        }
+
+        .case-section-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            margin-bottom: 20px;
+        }
+
+        .case-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .case-company {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--sr-text-primary);
+        }
+
+        .case-outcome {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 3px;
+        }
+
+        .outcome-failure {
+            background: rgba(255, 140, 148, 0.2);
+            color: var(--cult-warm);
+        }
+
+        .outcome-success {
+            background: rgba(157, 140, 255, 0.2);
+            color: var(--cult-accent);
+        }
+
+        .case-story {
+            font-size: 0.75rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .case-lesson {
+            font-size: 0.65rem;
+            color: var(--cult-accent);
+            font-style: italic;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ================================ */
+        /* PAGE 72 - CULTURE METRICS        */
+        /* ================================ */
+
+        .metrics-intro {
+            font-size: 0.82rem;
+            color: var(--sr-text-dark);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: var(--cult-light);
+            padding: 18px;
+            text-align: center;
+            border-bottom: 3px solid var(--cult-accent);
+        }
+
+        .metric-icon {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .metric-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            margin-bottom: 6px;
+        }
+
+        .metric-desc {
+            font-size: 0.6rem;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.4;
+        }
+
+        /* Framework box */
+        .framework-box {
+            background: var(--sr-charcoal);
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .framework-title {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+            margin-bottom: 15px;
+        }
+
+        .framework-list {
+            list-style: none;
+        }
+
+        .framework-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .framework-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .framework-icon {
+            width: 22px;
+            height: 22px;
+            min-width: 22px;
+            background: var(--cult-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .framework-icon span {
+            color: var(--cult-primary);
+            font-size: 0.6rem;
+            font-weight: 700;
+        }
+
+        .framework-text {
+            font-size: 0.75rem;
+            color: var(--sr-text-primary);
+            line-height: 1.45;
+        }
+
+        /* ================================ */
+        /* PAGE 73 - BOARD QUESTIONS        */
+        /* ================================ */
+
+        .questions-section {
+            background: linear-gradient(135deg, var(--cult-primary) 0%, var(--cult-deep) 100%);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .questions-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--sr-text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(157, 140, 255, 0.2);
+        }
+
+        .question-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .question-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--cult-accent);
+            min-width: 25px;
+        }
+
+        .question-text {
+            font-size: 0.8rem;
+            color: var(--sr-text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ================================ */
+        /* PAGE 74-75 - IMPLEMENTATION      */
+        /* ================================ */
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .phase-card {
+            background: white;
+            padding: 20px;
+            border-top: 4px solid var(--cult-accent);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .phase-number {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+            margin-bottom: 8px;
+        }
+
+        .phase-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--sr-text-dark);
+            margin-bottom: 10px;
+        }
+
+        .phase-actions {
+            list-style: none;
+        }
+
+        .phase-action {
+            font-size: 0.68rem;
+            color: rgba(0, 0, 0, 0.7);
+            padding-left: 12px;
+            position: relative;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .phase-action::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--cult-accent);
+            font-size: 0.6rem;
+        }
+
+        /* Warning box */
+        .warning-box-purple {
+            background: rgba(255, 140, 148, 0.08);
+            border-left: 3px solid var(--cult-warm);
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .warning-title {
+            font-size: 0.55rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cult-warm);
+            margin-bottom: 10px;
+        }
+
+        .warning-text {
+            font-size: 0.75rem;
+            color: var(--sr-text-dark);
+            line-height: 1.5;
+        }
+
+        /* ================================ */
+        /* PAGE 76 - SYNTHESIS              */
+        /* ================================ */
+
+        .synthesis-quote {
+            background: var(--cult-light);
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .synthesis-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--sr-text-dark);
+            line-height: 1.4;
+        }
+
+        .key-takeaways {
+            background: var(--sr-charcoal);
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .takeaways-title {
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sr-accent);
+            margin-bottom: 15px;
+        }
+
+        .takeaway-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .takeaway-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            background: var(--sr-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .takeaway-icon span {
+            color: var(--sr-charcoal);
+            font-size: 0.6rem;
+            font-weight: 700;
+        }
+
+        .takeaway-text {
+            font-size: 0.75rem;
+            color: var(--sr-text-primary);
+            line-height: 1.45;
+        }
+
+        /* ================================ */
+        /* PAGE 77 - CLOSING QUOTE          */
+        /* ================================ */
+
+        .page-77 {
+            background: linear-gradient(135deg, var(--cult-primary) 0%, var(--sr-black) 100%);
+        }
+
+        .quote-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(ellipse at center, var(--cult-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .big-quote {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+        }
+
+        .big-quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 8rem;
+            font-weight: 300;
+            color: var(--cult-accent);
+            line-height: 0.5;
+            opacity: 0.25;
+            display: block;
+            margin-bottom: -20px;
+        }
+
+        .big-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--sr-text-primary);
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .big-quote-author {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cult-accent);
+        }
+
+        .big-quote-role {
+            font-size: 0.65rem;
+            color: var(--sr-text-muted);
+            margin-top: 5px;
+        }
+
+        .article-end-mark {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .end-line {
+            width: 35px;
+            height: 1px;
+            background: var(--cult-accent-dim);
+        }
+
+        .end-icon {
+            width: 6px;
+            height: 6px;
+            background: var(--cult-accent);
+            transform: rotate(45deg);
+        }
+
+        /* Print */
+        @media print {
+            body { padding: 0; background: none; }
+            .page { box-shadow: none; page-break-after: always; }
+            .pages-container { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container">
+
+        <!-- PAGE 66 - DRAMATIC OPENING -->
+        <div class="page page-66">
+            <div class="iceberg-visual">
+                <div class="depth-glow"></div>
+                <div class="iceberg-mass"></div>
+                <div class="waterline"></div>
+                <div class="iceberg-tip"></div>
+                <span class="iceberg-label label-visible">What boards see</span>
+                <span class="iceberg-label label-hidden">What actually drives behavior</span>
+            </div>
+
+            <div class="page-inner">
+                <div class="opening-badge">
+                    <div class="badge-icon">🎯</div>
+                    <span class="badge-text">Strategic Focus</span>
+                </div>
+
+                <div class="opening-title">
+                    <div class="opening-eyebrow">The Governance Blind Spot</div>
+                    <h1 class="opening-main">Culture:<br><em>What Boards Don’t See</em></h1>
+                </div>
+            </div>
+
+            <span class="page-number pn-left">66</span>
+        </div>
+
+        <!-- PAGE 67 - TITLE SPREAD -->
+        <div class="page page-67">
+            <div class="vertical-accent"></div>
+            <span class="running-header">ECI Insights • Volume 1</span>
+
+            <div class="page-inner">
+                <div class="article-section-label">The Invisible Architecture of Performance</div>
+                <h1 class="article-title">What Boards Don’t See,<br><span class="article-title-accent">But Makes (or Breaks) Strategy</span></h1>
+                <p class="article-subtitle">Organizational culture remains the most consequential force that boards systematically fail to govern—and the cost of this blind spot is measured in failed transformations, departed talent, and unrealized potential.</p>
+
+                <div class="intro-text">
+                    <p>Every organization has a culture. Few organizations have a culture that their board can accurately describe, systematically monitor, or deliberately shape. This gap between cultural reality and board awareness represents one of the most significant governance failures of our time—significant because culture ultimately determines whether strategy succeeds or fails.</p>
+                    <p>The numbers are stark: research consistently shows that 70% of transformation initiatives fail to achieve their objectives. When leaders examine these failures, they find a common thread: not flawed strategy, but cultural resistance. The strategy was sound; the culture rejected it.</p>
+                </div>
+
+                <div class="quote-box">
+                    <p class="quote-box-text">Culture eats strategy for breakfast.</p>
+                    <p class="quote-box-author">— Peter Drucker</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">67</span>
+        </div>
+
+        <!-- PAGE 68 - WHY BOARDS MISS IT -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Strategic Focus</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>Why Boards Miss Culture</h3>
+                    <p>Board meetings are designed around the tangible: financial statements, operational metrics, risk registers, compliance reports. These artifacts occupy attention because they are measurable, comparable, and auditable. Culture, by contrast, is none of these things—and so it falls through the governance cracks.</p>
+                    
+                    <p>But there is a deeper problem. Most board members experience the organization only through carefully curated interactions: formal presentations, scripted site visits, sanitized reports. They see the organization’s “Sunday best” rather than its Monday reality. The gap between these two versions can be vast.</p>
+
+                    <div class="pull-quote-purple">
+                        <p>Boards govern what they can measure. Culture resists measurement. Therefore, boards do not govern culture—they merely assume it.</p>
+                    </div>
+
+                    <h3>The Cost of Cultural Blindness</h3>
+                    <p>When boards cannot see culture, they cannot anticipate how the organization will respond to strategic initiatives. They approve transformations without understanding the cultural antibodies that will attack them. They hire CEOs for their strategic vision without assessing cultural fit. They set incentives that clash with unwritten norms.</p>
+
+                    <p>The resulting failures are attributed to “execution problems” or “change resistance”—labels that obscure the real issue. The execution failed because the culture made success impossible. The change was resisted because it threatened deeply held beliefs that no one had surfaced or addressed.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">68</span>
+        </div>
+
+        <!-- PAGE 69 - CULTURE LAYERS INFOGRAPHIC -->
+        <div class="page page-69">
+            <div class="page-inner">
+                <div class="content-header content-header-dark">
+                    <span class="content-running content-running-light">Culture: What Boards Don’t See</span>
+                    <span class="content-section">Infographic</span>
+                </div>
+
+                <h2 class="layers-title">The Four Layers of Organizational Culture</h2>
+
+                <div class="culture-layers">
+                    <div class="layer layer-1">
+                        <div class="layer-depth">1</div>
+                        <div class="layer-content">
+                            <h4 class="layer-name">Artifacts &amp; Symbols</h4>
+                            <p class="layer-desc">Visible manifestations: office design, dress code, rituals, published values, organizational charts</p>
+                        </div>
+                        <span class="layer-visibility vis-high">Visible</span>
+                    </div>
+
+                    <div class="layer layer-2">
+                        <div class="layer-depth">2</div>
+                        <div class="layer-content">
+                            <h4 class="layer-name">Espoused Values</h4>
+                            <p class="layer-desc">What leaders say matters: stated priorities, official policies, strategic communications</p>
+                        </div>
+                        <span class="layer-visibility vis-medium">Partially Visible</span>
+                    </div>
+
+                    <div class="layer layer-3">
+                        <div class="layer-depth">3</div>
+                        <div class="layer-content">
+                            <h4 class="layer-name">Enacted Values</h4>
+                            <p class="layer-desc">What actually gets rewarded and punished: real decision criteria, promotion patterns, resource allocation</p>
+                        </div>
+                        <span class="layer-visibility vis-low">Mostly Hidden</span>
+                    </div>
+
+                    <div class="layer layer-4">
+                        <div class="layer-depth">4</div>
+                        <div class="layer-content">
+                            <h4 class="layer-name">Basic Assumptions</h4>
+                            <p class="layer-desc">Unconscious beliefs taken for granted: “how things work here,” unquestioned premises</p>
+                        </div>
+                        <span class="layer-visibility vis-low">Invisible</span>
+                    </div>
+                </div>
+
+                <div class="layers-legend">
+                    <div class="legend-item">
+                        <span class="legend-arrow">↑</span>
+                        <span class="legend-text">Easy to change, low impact</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-arrow">↓</span>
+                        <span class="legend-text">Hard to change, high impact</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">69</span>
+        </div>
+
+        <!-- PAGE 70 - BLIND SPOTS -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">Culture: What Boards Don’t See</span>
+                    <span class="content-section">Strategic Focus</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>Six Cultural Blind Spots</h3>
+                    <p>Boards consistently miss the same cultural dynamics. Recognizing these patterns is the first step toward addressing them.</p>
+                </div>
+
+                <div class="blindspot-grid">
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">01</div>
+                        <h4 class="blindspot-title">The Say-Do Gap</h4>
+                        <p class="blindspot-desc">The distance between stated values and actual behavior. Organizations that claim “people first” while systematically burning out employees.</p>
+                    </div>
+
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">02</div>
+                        <h4 class="blindspot-title">Shadow Hierarchies</h4>
+                        <p class="blindspot-desc">Informal power structures that bypass the org chart. Who actually influences decisions regardless of title.</p>
+                    </div>
+
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">03</div>
+                        <h4 class="blindspot-title">Unwritten Rules</h4>
+                        <p class="blindspot-desc">The real criteria for success that nobody documents. What behaviors actually get promoted versus what HR says.</p>
+                    </div>
+
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">04</div>
+                        <h4 class="blindspot-title">Fear Patterns</h4>
+                        <p class="blindspot-desc">What people are afraid to say, do, or challenge. The topics that never reach the boardroom.</p>
+                    </div>
+
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">05</div>
+                        <h4 class="blindspot-title">Tribal Boundaries</h4>
+                        <p class="blindspot-desc">Which groups cooperate and which compete. Where information flows freely and where it stops.</p>
+                    </div>
+
+                    <div class="blindspot-card">
+                        <div class="blindspot-number">06</div>
+                        <h4 class="blindspot-title">Success Mythology</h4>
+                        <p class="blindspot-desc">The stories told about how people succeed. Heroes celebrated versus heroes suppressed.</p>
+                    </div>
+                </div>
+
+                <div class="body-text">
+                    <p>Each blind spot represents information that would change board decisions if it were visible. The question is not whether this information exists—it always does—but whether governance structures are designed to surface it.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">70</span>
+        </div>
+
+        <!-- PAGE 71 - CASE STUDIES -->
+        <div class="page page-71">
+            <div class="page-inner">
+                <div class="content-header content-header-dark">
+                    <span class="content-running content-running-light">Culture: What Boards Don’t See</span>
+                    <span class="content-section">Case Studies</span>
+                </div>
+
+                <h2 class="case-section-title">When Culture Collides with Strategy</h2>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <h4 class="case-company">Global Bank: Digital Transformation</h4>
+                        <span class="case-outcome outcome-failure">Strategy Failed</span>
+                    </div>
+                    <p class="case-story">A major bank invested €500M in digital transformation. The strategy was sound; the technology was proven. But the culture celebrated relationship banking and viewed digital as a threat to jobs. Middle managers quietly sabotaged implementation. Three years later, the project was written off.</p>
+                    <p class="case-lesson">Lesson: The board approved investment without assessing cultural readiness. No amount of technology investment can overcome a culture that perceives the change as existential threat.</p>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <h4 class="case-company">Manufacturing Firm: Safety Culture</h4>
+                        <span class="case-outcome outcome-success">Culture Shifted</span>
+                    </div>
+                    <p class="case-story">Following a serious incident, the board made safety a standing agenda item. They required unfiltered incident data, conducted unannounced site visits, and tied executive compensation to leading indicators. Within three years, lost-time injuries dropped 75%.</p>
+                    <p class="case-lesson">Lesson: When boards commit sustained attention and create accountability mechanisms, cultural change becomes possible. The key was treating culture as a governance matter, not an HR initiative.</p>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-header">
+                        <h4 class="case-company">Tech Startup: Scaling Crisis</h4>
+                        <span class="case-outcome outcome-failure">Talent Exodus</span>
+                    </div>
+                    <p class="case-story">A fast-growing startup hired a “professional CEO” to prepare for IPO. The new leader introduced processes that clashed with the entrepreneurial culture. Top engineers departed. The IPO was delayed two years while rebuilding the team.</p>
+                    <p class="case-lesson">Lesson: The board focused on operational readiness without considering cultural fit. Leadership transitions require cultural due diligence, not just capability assessment.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-right">71</span>
+        </div>
+
+        <!-- PAGE 72 - CULTURE METRICS -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Measurement</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>Making Culture Visible</h3>
+                    <p class="metrics-intro">Culture cannot be measured with the precision of financial statements, but it can be made visible through systematic observation. The following indicators, tracked over time, reveal cultural patterns that would otherwise remain hidden.</p>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">📊</div>
+                        <h4 class="metric-name">Engagement Trends</h4>
+                        <p class="metric-desc">Not the score itself, but trajectory and variance across units</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🚪</div>
+                        <h4 class="metric-name">Exit Patterns</h4>
+                        <p class="metric-desc">Who leaves, from where, and what they say in exit interviews</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">⏱️</div>
+                        <h4 class="metric-name">Decision Velocity</h4>
+                        <p class="metric-desc">How long decisions take and where they get stuck</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🔄</div>
+                        <h4 class="metric-name">Cross-Boundary Flow</h4>
+                        <p class="metric-desc">Whether information and talent move across silos</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🎯</div>
+                        <h4 class="metric-name">Initiative Completion</h4>
+                        <p class="metric-desc">Rate at which strategic initiatives achieve objectives</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💬</div>
+                        <h4 class="metric-name">Speak-Up Index</h4>
+                        <p class="metric-desc">Whether employees feel safe raising concerns</p>
+                    </div>
+                </div>
+
+                <div class="framework-box">
+                    <div class="framework-title">The Culture Dashboard</div>
+                    <ul class="framework-list">
+                        <li class="framework-item">
+                            <div class="framework-icon"><span>1</span></div>
+                            <span class="framework-text">Select 6-8 indicators relevant to strategic priorities</span>
+                        </li>
+                        <li class="framework-item">
+                            <div class="framework-icon"><span>2</span></div>
+                            <span class="framework-text">Track quarterly with consistent methodology</span>
+                        </li>
+                        <li class="framework-item">
+                            <div class="framework-icon"><span>3</span></div>
+                            <span class="framework-text">Focus on trends and patterns, not absolute numbers</span>
+                        </li>
+                        <li class="framework-item">
+                            <div class="framework-icon"><span>4</span></div>
+                            <span class="framework-text">Include qualitative input: skip-level conversations, external perspectives</span>
+                        </li>
+                        <li class="framework-item">
+                            <div class="framework-icon"><span>5</span></div>
+                            <span class="framework-text">Review at board level annually, with management quarterly</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">72</span>
+        </div>
+
+        <!-- PAGE 73 - BOARD QUESTIONS -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">Culture: What Boards Don’t See</span>
+                    <span class="content-section">Governance</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>Governing Culture</h3>
+                    <p>Making culture a governance matter requires both structural changes and behavioral shifts. Boards must create mechanisms for surfacing cultural reality and demonstrate genuine curiosity about what lies beneath the polished presentations.</p>
+                </div>
+
+                <div class="questions-section">
+                    <h4 class="questions-title">Ten Questions Every Board Should Ask</h4>
+                    
+                    <div class="question-item">
+                        <span class="question-number">1</span>
+                        <p class="question-text">What would employees say is the real criteria for getting ahead here?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">2</span>
+                        <p class="question-text">When was the last time someone was promoted despite being “difficult”?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">3</span>
+                        <p class="question-text">What topics never make it to the executive committee agenda?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">4</span>
+                        <p class="question-text">How do people describe our culture when recruiters call?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">5</span>
+                        <p class="question-text">What happens to people who deliver results but violate values?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">6</span>
+                        <p class="question-text">Where does information flow freely, and where does it stop?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">7</span>
+                        <p class="question-text">What would make our best people consider leaving?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">8</span>
+                        <p class="question-text">How would a new hire describe our culture after six months?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">9</span>
+                        <p class="question-text">What strategic initiative failed because “the organization wasn’t ready”?</p>
+                    </div>
+                    <div class="question-item">
+                        <span class="question-number">10</span>
+                        <p class="question-text">When did we last hear directly from employees without management filter?</p>
+                    </div>
+                </div>
+            </div>
+
+            <span class="page-number pn-right pn-dark">73</span>
+        </div>
+
+        <!-- PAGE 74 - IMPLEMENTATION -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Implementation</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>From Awareness to Action</h3>
+                    <p>Recognizing cultural blind spots is necessary but insufficient. Boards must translate awareness into structured practices that keep culture visible and governable.</p>
+                </div>
+
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-number">Phase 1: Diagnosis</div>
+                        <h4 class="phase-name">Surface Current Reality</h4>
+                        <ul class="phase-actions">
+                            <li class="phase-action">Commission independent culture assessment</li>
+                            <li class="phase-action">Conduct skip-level board conversations</li>
+                            <li class="phase-action">Review exit interview patterns</li>
+                            <li class="phase-action">Map say-do gaps against stated values</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card">
+                        <div class="phase-number">Phase 2: Design</div>
+                        <h4 class="phase-name">Create Visibility Mechanisms</h4>
+                        <ul class="phase-actions">
+                            <li class="phase-action">Define culture metrics for board dashboard</li>
+                            <li class="phase-action">Establish regular unfiltered input channels</li>
+                            <li class="phase-action">Integrate culture into strategic planning</li>
+                            <li class="phase-action">Assign explicit board accountability</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card">
+                        <div class="phase-number">Phase 3: Embed</div>
+                        <h4 class="phase-name">Institutionalize Practices</h4>
+                        <ul class="phase-actions">
+                            <li class="phase-action">Add culture to CEO evaluation criteria</li>
+                            <li class="phase-action">Require cultural due diligence for M&amp;A</li>
+                            <li class="phase-action">Review culture fit in executive hiring</li>
+                            <li class="phase-action">Annual culture strategy session</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card">
+                        <div class="phase-number">Phase 4: Evolve</div>
+                        <h4 class="phase-name">Continuous Improvement</h4>
+                        <ul class="phase-actions">
+                            <li class="phase-action">Track leading indicators quarterly</li>
+                            <li class="phase-action">Adjust based on strategic priorities</li>
+                            <li class="phase-action">Benchmark against peer organizations</li>
+                            <li class="phase-action">Refresh assessment methodology</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning-box-purple">
+                    <div class="warning-title">Implementation Warning</div>
+                    <p class="warning-text">Culture work that becomes bureaucratic theater is worse than no culture work at all. It creates cynicism and inoculates the organization against future genuine efforts. Keep interventions authentic, focused, and connected to real business impact.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">74</span>
+        </div>
+
+        <!-- PAGE 75 - CEO & BOARD ROLE -->
+        <div class="page page-cream">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">Culture: What Boards Don’t See</span>
+                    <span class="content-section">Governance</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>The CEO’s Cultural Role</h3>
+                    <p>The CEO is the primary architect of organizational culture. Every decision, every meeting behavior, every allocation of attention sends signals that shape cultural norms. This makes CEO selection the board’s most consequential cultural decision.</p>
+
+                    <div class="pull-quote-purple">
+                        <p>A CEO who doesn’t understand the current culture cannot lead cultural change. A CEO who doesn’t model desired behaviors will never achieve them.</p>
+                    </div>
+
+                    <h3>Board Modeling</h3>
+                    <p>Boards also shape culture, though they often don’t realize it. How the board treats management, whether it encourages candor or punishes bad news, whether it asks about culture or ignores it—all of these patterns cascade through the organization.</p>
+
+                    <p>Boards that want a speak-up culture must demonstrate that they welcome uncomfortable truths. Boards that want innovation must tolerate intelligent failure. Boards that want collaboration must model it in their own dynamics.</p>
+
+                    <h3>The Integration Imperative</h3>
+                    <p>Culture is not a separate agenda item to be addressed quarterly. It is the lens through which every board decision should be examined. When approving strategy: what cultural capabilities does this require? When hiring executives: do they fit the culture we have or the one we need? When reviewing performance: are we rewarding behaviors aligned with stated values?</p>
+
+                    <p>This integration requires discipline. It means slowing down decisions to consider cultural implications. It means asking questions that don’t have easy answers. It means accepting that some strategically attractive options may be culturally impossible—at least without significant preparatory work.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-right pn-dark">75</span>
+        </div>
+
+        <!-- PAGE 76 - SYNTHESIS -->
+        <div class="page page-light">
+            <div class="page-inner">
+                <div class="content-header">
+                    <span class="content-running">ECI Insights • Volume 1</span>
+                    <span class="content-section">Synthesis</span>
+                </div>
+
+                <div class="body-text">
+                    <h3>The Cultural Imperative</h3>
+                    <p>Organizations face a choice. They can continue to treat culture as too soft, too intangible, too difficult to govern—and accept the consequences when strategies fail, transformations stall, and talent departs. Or they can develop the discipline to see culture clearly and govern it deliberately.</p>
+                </div>
+
+                <div class="synthesis-quote">
+                    <p class="synthesis-text">The board that cannot see its organization’s culture is flying blind. The board that sees it but doesn’t govern it is abdicating responsibility. The board that governs it effectively has found a source of sustainable competitive advantage.</p>
+                </div>
+
+                <div class="key-takeaways">
+                    <div class="takeaways-title">Key Takeaways for Boards</div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>1</span></div>
+                        <span class="takeaway-text">Culture determines strategy execution—ignore it at your peril</span>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>2</span></div>
+                        <span class="takeaway-text">Create mechanisms to surface cultural reality beyond management presentations</span>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>3</span></div>
+                        <span class="takeaway-text">Track cultural indicators with the same rigor applied to financial metrics</span>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>4</span></div>
+                        <span class="takeaway-text">Integrate cultural assessment into all major decisions: strategy, M&amp;A, hiring</span>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>5</span></div>
+                        <span class="takeaway-text">Model the culture you want—board behavior shapes organizational norms</span>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon"><span>6</span></div>
+                        <span class="takeaway-text">Treat CEO selection as the most important cultural decision</span>
+                    </div>
+                </div>
+
+                <div class="body-text">
+                    <p>Culture is not soft. It is not intangible. It is the operating system on which all organizational performance runs. Boards that learn to see it, measure it, and govern it will lead organizations that outperform those that don’t.</p>
+                </div>
+            </div>
+
+            <span class="page-number pn-left pn-dark">76</span>
+        </div>
+
+        <!-- PAGE 77 - CLOSING QUOTE -->
+        <div class="page page-77">
+            <div class="quote-glow"></div>
+            <span class="running-header">Culture: What Boards Don’t See</span>
+
+            <div class="big-quote">
+                <span class="big-quote-mark">“</span>
+                <p class="big-quote-text">The most consequential thing a board can govern is the thing it is least equipped to see: the invisible architecture of beliefs, behaviors, and assumptions that determine whether anything else it decides will actually work.</p>
+                <p class="big-quote-author">ECI Research</p>
+                <p class="big-quote-role">Strategic Focus, 2026</p>
+            </div>
+
+            <div class="article-end-mark">
+                <div class="end-line"></div>
+                <div class="end-icon"></div>
+                <div class="end-line"></div>
+            </div>
+
+            <span class="page-number pn-right">77</span>
+        </div>
+
+    </div>
+
+
+</body></html>

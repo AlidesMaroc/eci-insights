@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///C:/Users/MehdiELIDRISSI/Downloads/eci-insights-article-directive970.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECI Insights — EU Directive 970: Pay Transparency</title>
+    <link href="./ECI Insights — EU Directive 970_ Pay Transparency_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            /* ECI Group Brand Colors */
+            --eci-dark: #1a1a1a;
+            --eci-charcoal: #2d2d2d;
+            --eci-gray: #4a4a4a;
+            --eci-medium-gray: #767676;
+            --eci-light-gray: #e5e5e5;
+            --eci-off-white: #f8f7f5;
+            --eci-cream: #f5f3ef;
+            --eci-white: #ffffff;
+            --eci-accent: #c8a45c;
+            /* EU Theme */
+            --eu-blue: #003399;
+            --eu-blue-light: #4267b2;
+            --eu-blue-pale: #e8eef7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: 210mm 297mm;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #d0d0d0;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--eci-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ======================= */
+        /* PAGE 1 - OPENING SPREAD */
+        /* ======================= */
+
+        .page-opening {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* Left Panel - Visual */
+        .opening-visual {
+            background: linear-gradient(160deg, var(--eu-blue) 0%, #001a4d 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        .opening-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(200,164,92,0.08) 0%, transparent 40%);
+        }
+
+        /* EU Stars Pattern */
+        .eu-stars {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            opacity: 0.08;
+        }
+
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--eci-accent);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+        .star:nth-child(2) { top: 10%; left: 80%; }
+        .star:nth-child(3) { top: 35%; left: 95%; }
+        .star:nth-child(4) { top: 65%; left: 95%; }
+        .star:nth-child(5) { top: 90%; left: 80%; }
+        .star:nth-child(6) { top: 100%; left: 50%; transform: translateX(-50%); }
+        .star:nth-child(7) { top: 90%; left: 20%; }
+        .star:nth-child(8) { top: 65%; left: 5%; }
+        .star:nth-child(9) { top: 35%; left: 5%; }
+        .star:nth-child(10) { top: 10%; left: 20%; }
+
+        .directive-badge {
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            display: inline-block;
+            margin-bottom: auto;
+        }
+
+        .directive-badge-label {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 5px;
+        }
+
+        .directive-badge-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--eci-white);
+            line-height: 1;
+        }
+
+        .visual-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .visual-stat {
+            margin-bottom: 30px;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--eci-accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 5px;
+        }
+
+        .visual-quote {
+            border-left: 3px solid var(--eci-accent);
+            padding-left: 20px;
+        }
+
+        .quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--eci-white);
+            line-height: 1.4;
+        }
+
+        /* Right Panel - Content */
+        .opening-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 35px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eci-white);
+            background: var(--eci-accent);
+            padding: 6px 12px;
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .article-subtitle {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--eci-gray);
+            line-height: 1.4;
+        }
+
+        .intro-text {
+            font-size: 0.95rem;
+            color: var(--eci-charcoal);
+            line-height: 1.85;
+            flex: 1;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .intro-text p:first-child::first-letter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 4rem;
+            font-weight: 600;
+            float: left;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 5px;
+            color: var(--eu-blue);
+        }
+
+        .key-dates {
+            background: var(--eu-blue-pale);
+            padding: 25px;
+            margin-top: auto;
+        }
+
+        .key-dates-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eu-blue);
+            margin-bottom: 15px;
+        }
+
+        .date-item {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .date-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .date-year {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--eu-blue);
+            min-width: 50px;
+        }
+
+        .date-text {
+            font-size: 0.8rem;
+            color: var(--eci-charcoal);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--eci-medium-gray);
+        }
+
+        .page-number-left { left: 50px; }
+        .page-number-right { right: 50px; }
+
+        /* ======================= */
+        /* PAGE 2 - KEY PROVISIONS */
+        /* ======================= */
+
+        .page-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .running-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--eci-light-gray);
+            margin-bottom: 40px;
+        }
+
+        .running-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-medium-gray);
+        }
+
+        .running-section {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+        }
+
+        .content-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 30px;
+        }
+
+        .provisions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .provision-card {
+            padding: 25px;
+            background: var(--eci-off-white);
+            position: relative;
+            border-left: 4px solid var(--eu-blue);
+        }
+
+        .provision-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--eu-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .provision-icon span {
+            color: var(--eci-white);
+            font-size: 1.2rem;
+        }
+
+        .provision-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 10px;
+        }
+
+        .provision-text {
+            font-size: 0.8rem;
+            color: var(--eci-gray);
+            line-height: 1.6;
+        }
+
+        .impact-section {
+            background: var(--eci-dark);
+            padding: 35px;
+            margin: 0 -50px;
+            margin-bottom: -50px;
+            margin-top: auto;
+        }
+
+        .impact-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 20px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .impact-item {
+            text-align: center;
+        }
+
+        .impact-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--eci-accent);
+            line-height: 1;
+        }
+
+        .impact-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* ======================= */
+        /* PAGE 3 - INTERVIEW */
+        /* ======================= */
+
+        .page-interview {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .interview-header {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Interviewee Card */
+        .interviewee-card {
+            width: 280px;
+            flex-shrink: 0;
+            background: linear-gradient(145deg, var(--eu-blue) 0%, #001a4d 100%);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interviewee-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(200, 164, 92, 0.1);
+            border-radius: 50%;
+        }
+
+        .interviewee-photo {
+            width: 110px;
+            height: 110px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--eci-accent);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .interviewee-initials {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--eci-white);
+        }
+
+        .interviewee-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--eci-white);
+            text-align: center;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-role {
+            font-size: 0.8rem;
+            color: var(--eci-accent);
+            text-align: center;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-company {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .interviewee-bio {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .interview-intro {
+            flex: 1;
+        }
+
+        .interview-label {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--eu-blue);
+            background: var(--eu-blue-pale);
+            padding: 6px 12px;
+            margin-bottom: 15px;
+        }
+
+        .interview-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .interview-subtitle {
+            font-size: 0.9rem;
+            color: var(--eci-gray);
+            line-height: 1.6;
+        }
+
+        /* Q&A Section */
+        .qa-section {
+            flex: 1;
+        }
+
+        .qa-item {
+            margin-bottom: 25px;
+        }
+
+        .qa-question {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--eci-dark);
+            margin-bottom: 12px;
+            padding-left: 20px;
+            border-left: 3px solid var(--eu-blue);
+        }
+
+        .qa-answer {
+            font-size: 0.85rem;
+            color: var(--eci-charcoal);
+            line-height: 1.75;
+            padding-left: 20px;
+        }
+
+        /* ======================= */
+        /* PAGE 4 - INTERVIEW CONT */
+        /* ======================= */
+
+        .pull-quote-large {
+            background: var(--eu-blue-pale);
+            padding: 40px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .pull-quote-large::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 6rem;
+            color: var(--eu-blue);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .pull-quote-text {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--eci-dark);
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pull-quote-author {
+            font-size: 0.75rem;
+            color: var(--eu-blue);
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .key-takeaways {
+            background: var(--eci-off-white);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .takeaways-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--eci-accent);
+            margin-bottom: 20px;
+        }
+
+        .takeaway-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .takeaway-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .takeaway-number {
+            width: 24px;
+            height: 24px;
+            background: var(--eu-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .takeaway-number span {
+            color: var(--eci-white);
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .takeaway-text {
+            font-size: 0.85rem;
+            color: var(--eci-charcoal);
+            line-height: 1.5;
+        }
+
+        /* End mark */
+        .end-mark {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--eci-light-gray);
+        }
+
+        .end-mark-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--eci-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .end-mark-icon span {
+            color: var(--eci-white);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .end-mark-text {
+            font-size: 0.7rem;
+            color: var(--eci-medium-gray);
+            font-style: italic;
+        }
+
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--eci-light-gray);
+        }
+
+        .footer-left {
+            font-size: 0.6rem;
+            color: var(--eci-medium-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Print */
+        @media print {
+            body { padding: 0; background: none; }
+            .page { box-shadow: none; page-break-after: always; }
+            .pages-container { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container">
+
+        <!-- PAGE 1: Opening Spread -->
+        <div class="page page-opening">
+            <!-- Left Visual Panel -->
+            <div class="opening-visual">
+                <div class="eu-stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+
+                <div class="directive-badge">
+                    <div class="directive-badge-label">EU Directive</div>
+                    <div class="directive-badge-number">2023/970</div>
+                </div>
+
+                <div class="visual-content">
+                    <div class="visual-stat">
+                        <div class="stat-number">13%</div>
+                        <div class="stat-label">Average gender pay gap in EU</div>
+                    </div>
+                    <div class="visual-quote">
+                        <p class="quote-text">Transparency is not just compliance—it's a catalyst for cultural change in how organizations value work.</p>
+                    </div>
+                </div>
+
+                <span class="page-number page-number-left" style="color: rgba(255,255,255,0.5);">54</span>
+            </div>
+
+            <!-- Right Content Panel -->
+            <div class="opening-content">
+                <div class="section-header">
+                    <div class="section-label">Expert Insights</div>
+                    <h1 class="article-title">EU Directive 970: Pay Transparency</h1>
+                    <p class="article-subtitle">A New Era for Gender Equality and Compensation Governance</p>
+                </div>
+
+                <div class="intro-text">
+                    <p>On May 10, 2023, the European Union adopted Directive 2023/970, a landmark regulation designed to strengthen pay transparency and accelerate progress toward equal pay for equal work between women and men.</p>
+                    <p>For HR leaders, board members, and executive search professionals, this directive represents both a compliance imperative and a strategic opportunity. Organizations that proactively embrace transparency will gain competitive advantage in talent attraction and retention.</p>
+                    <p>This article examines the directive's key provisions and their practical implications, followed by an interview with legal expert Davide Sportelli on implementation strategies.</p>
+                </div>
+
+                <div class="key-dates">
+                    <div class="key-dates-title">Key Milestones</div>
+                    <div class="date-item">
+                        <span class="date-year">2023</span>
+                        <span class="date-text">Directive adopted by European Parliament</span>
+                    </div>
+                    <div class="date-item">
+                        <span class="date-year">2026</span>
+                        <span class="date-text">Member States must transpose into national law</span>
+                    </div>
+                    <div class="date-item">
+                        <span class="date-year">2027</span>
+                        <span class="date-text">First reporting obligations for large companies</span>
+                    </div>
+                </div>
+
+                <span class="page-number page-number-right">55</span>
+            </div>
+        </div>
+
+        <!-- PAGE 2: Key Provisions -->
+        <div class="page">
+            <div class="page-content">
+                <div class="running-header">
+                    <span class="running-title">ECI Insights • Volume 1</span>
+                    <span class="running-section">Expert Insights</span>
+                </div>
+
+                <h2 class="content-title">Key Provisions of the Directive</h2>
+
+                <div class="provisions-grid">
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>💰</span></div>
+                        <h3 class="provision-title">Pay Information for Job Seekers</h3>
+                        <p class="provision-text">Employers must provide salary ranges in job postings or before interviews. Asking candidates about salary history is prohibited.</p>
+                    </div>
+
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>📊</span></div>
+                        <h3 class="provision-title">Right to Pay Information</h3>
+                        <p class="provision-text">Employees can request information about average pay levels, broken down by gender, for comparable work categories.</p>
+                    </div>
+
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>📋</span></div>
+                        <h3 class="provision-title">Gender Pay Gap Reporting</h3>
+                        <p class="provision-text">Companies with 100+ employees must report pay gaps. Those with 250+ face annual reporting; smaller firms report every three years.</p>
+                    </div>
+
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>🔍</span></div>
+                        <h3 class="provision-title">Joint Pay Assessment</h3>
+                        <p class="provision-text">If reporting reveals a gap exceeding 5% without objective justification, employers must conduct a joint assessment with employee representatives.</p>
+                    </div>
+
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>⚖️</span></div>
+                        <h3 class="provision-title">Burden of Proof Shift</h3>
+                        <p class="provision-text">In pay discrimination cases, the burden shifts to the employer to prove no discrimination occurred—a significant legal change.</p>
+                    </div>
+
+                    <div class="provision-card">
+                        <div class="provision-icon"><span>🛡️</span></div>
+                        <h3 class="provision-title">Enhanced Remedies</h3>
+                        <p class="provision-text">Victims of pay discrimination are entitled to full compensation including back pay, bonuses, and non-material damages.</p>
+                    </div>
+                </div>
+
+                <div class="impact-section">
+                    <div class="impact-title">Expected Impact</div>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="impact-number">~150M</div>
+                            <div class="impact-label">Workers covered across EU</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">€100K+</div>
+                            <div class="impact-label">Potential penalties for non-compliance</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number">2027</div>
+                            <div class="impact-label">First compliance deadline</div>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="page-number page-number-right">56</span>
+            </div>
+        </div>
+
+        <!-- PAGE 3: Interview Part 1 -->
+        <div class="page page-interview">
+            <div class="running-header">
+                <span class="running-title">ECI Insights • Volume 1</span>
+                <span class="running-section">Expert Insights — Interview</span>
+            </div>
+
+            <div class="interview-header">
+                <!-- Interviewee Card -->
+                <div class="interviewee-card">
+                    <div class="interviewee-photo" style="background: url(&#39;data:image/webp;base64,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&#39;) center center / cover no-repeat; border: none;">
+                    </div>
+                    <h3 class="interviewee-name">Davide Sportelli</h3>
+                    <p class="interviewee-role">Partner, Head of Employment</p>
+                    <p class="interviewee-company">Simmons &amp; Simmons — Milan</p>
+                    <p class="interviewee-bio">Davide heads the Employment group in Milan, advising Italian and international companies on all aspects of employment law. Recognized by Chambers Europe for his expertise in collective dismissals and restructuring, he was awarded "Lawyer of the Year" at the Legalcommunity Labour Awards 2018.</p>
+                </div>
+
+                <div class="interview-intro">
+                    <div class="interview-label">Expert Interview</div>
+                    <h2 class="interview-title">Preparing for Pay Transparency: A Legal Perspective</h2>
+                    <p class="interview-subtitle">We spoke with Davide Sportelli, Partner at Simmons &amp; Simmons, about how organizations should prepare for the new EU Pay Transparency Directive and the strategic implications for HR and governance.</p>
+                </div>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">What makes this directive different from previous equal pay legislation?</p>
+                    <p class="qa-answer">The fundamental shift is from reactive to proactive compliance. Previous frameworks required employees to prove discrimination; now, employers must demonstrate pay equity. The transparency requirements—publishing salary ranges, reporting gaps, allowing employees to request comparative data—create systemic accountability that didn't exist before.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">Which organizations will be most affected?</p>
+                    <p class="qa-answer">Large employers face the most immediate obligations, but the ripple effects will reach everyone. Companies with 250+ employees must report annually starting in 2027; those with 100-249 employees have until 2031. However, the prohibition on salary history questions and the requirement to share pay ranges apply regardless of size. Multinationals operating across EU jurisdictions face particular complexity.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">What are the biggest compliance challenges you foresee?</p>
+                    <p class="qa-answer">Three stand out. First, defining "work of equal value"—the directive requires objective, gender-neutral criteria, but many organizations lack robust job evaluation frameworks. Second, data infrastructure—calculating and reporting pay gaps requires clean, comprehensive compensation data that many HR systems simply don't provide. Third, cultural resistance—transparency often reveals uncomfortable truths that leadership may prefer to avoid.</p>
+                </div>
+            </div>
+
+            <span class="page-number page-number-right">57</span>
+        </div>
+
+        <!-- PAGE 4: Interview Part 2 + Conclusion -->
+        <div class="page page-interview">
+            <div class="running-header">
+                <span class="running-title">ECI Insights • Volume 1</span>
+                <span class="running-section">Expert Insights — Interview</span>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">How should organizations begin preparing now?</p>
+                    <p class="qa-answer">Start with a pay equity audit—understand your current state before the reporting requirements kick in. Map job roles against objective criteria to identify "work of equal value" categories. Invest in compensation analytics capabilities. Most importantly, treat this as a strategic initiative, not just a compliance exercise. Organizations that genuinely commit to pay equity will differentiate themselves in the talent market.</p>
+                </div>
+
+                <div class="qa-item">
+                    <p class="qa-question">What role should boards and senior leadership play?</p>
+                    <p class="qa-answer">Governance oversight is essential. Boards should request regular briefings on pay equity metrics just as they do for financial performance. Compensation committees need to scrutinize not just executive pay but organization-wide equity. The directive creates potential personal liability for directors who fail to ensure compliance—this needs to be on the board agenda.</p>
+                </div>
+            </div>
+
+            <div class="pull-quote-large">
+                <p class="pull-quote-text">Organizations that treat pay transparency as a strategic opportunity rather than a compliance burden will gain significant competitive advantage in attracting and retaining talent.</p>
+                <p class="pull-quote-author">— Davide Sportelli, Simmons &amp; Simmons</p>
+            </div>
+
+            <div class="qa-section">
+                <div class="qa-item">
+                    <p class="qa-question">Any final advice for executive search professionals?</p>
+                    <p class="qa-answer">Understand that compensation conversations are changing fundamentally. Candidates will expect—and have legal rights to—salary range information upfront. The days of negotiating from asymmetric information are ending. Search professionals who help clients build transparent, equitable compensation frameworks will add genuine value beyond traditional recruitment.</p>
+                </div>
+            </div>
+
+            <div class="key-takeaways">
+                <div class="takeaways-title">Key Takeaways for Boards</div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>1</span></div>
+                    <p class="takeaway-text">Conduct a pay equity audit before mandatory reporting begins</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>2</span></div>
+                    <p class="takeaway-text">Invest in job evaluation frameworks with objective, gender-neutral criteria</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>3</span></div>
+                    <p class="takeaway-text">Upgrade compensation data systems to enable accurate gap reporting</p>
+                </div>
+                <div class="takeaway-item">
+                    <div class="takeaway-number"><span>4</span></div>
+                    <p class="takeaway-text">Position pay transparency as strategic advantage, not compliance burden</p>
+                </div>
+            </div>
+
+            <div class="end-mark">
+                <div class="end-mark-icon"><span>■</span></div>
+                <p class="end-mark-text">Davide Sportelli is a Partner and Head of Employment at Simmons &amp; Simmons in Milan. For more information, visit simmons-simmons.com</p>
+            </div>
+
+            <footer class="page-footer">
+                <span class="footer-left">EU Directive 970: Pay Transparency</span>
+                <span class="page-number" style="position: static;">58</span>
+            </footer>
+        </div>
+
+    </div>
+
+
+</body></html>
